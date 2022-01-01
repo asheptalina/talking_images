@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "iOSDevPackage",
+        "repositoryURL": "https://github.com/ISSArt-LLC/SwiftDeveloperPackage",
+        "state": {
+          "branch": "main",
+          "revision": "6f283034a184934ce65f2d7313960c0ae888e9bf",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
