@@ -24,7 +24,7 @@
 		7BAFF5C12780AEAC00051F59 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5C02780AEAC00051F59 /* AppColors.swift */; };
 		7BAFF5C42780B26D00051F59 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFF5C32780B26D00051F59 /* iOSDevPackage */; };
 		7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */; };
-		7BAFF5CA2780B55E00051F59 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5C92780B55E00051F59 /* .swiftlint.yml */; };
+		7BAFF5CC2780BF5300051F59 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		7BAFF5BE2780AE9F00051F59 /* AppImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImageNames.swift; sourceTree = "<group>"; };
 		7BAFF5C02780AEAC00051F59 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+CustomFont.swift"; sourceTree = "<group>"; };
-		7BAFF5C92780B55E00051F59 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +97,7 @@
 		7BAFF5752780A4CA00051F59 = {
 			isa = PBXGroup;
 			children = (
-				7BAFF5C92780B55E00051F59 /* .swiftlint.yml */,
+				7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */,
 				7BAFF5802780A4CA00051F59 /* TalkingImages */,
 				7BAFF5912780A4CD00051F59 /* TalkingImagesTests */,
 				7BAFF59B2780A4CD00051F59 /* TalkingImagesUITests */,
@@ -312,7 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAFF5CA2780B55E00051F59 /* .swiftlint.yml in Resources */,
+				7BAFF5CC2780BF5300051F59 /* .swiftlint.yml in Resources */,
 				7BAFF5B72780ADA800051F59 /* BalooBhaijaan2-ExtraBold.ttf in Resources */,
 				7BAFF5B92780ADA800051F59 /* BalooBhaijaan2-SemiBold.ttf in Resources */,
 				7BAFF5B52780ADA800051F59 /* BalooBhaijaan2-Regular.ttf in Resources */,
