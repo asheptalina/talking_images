@@ -25,6 +25,15 @@
 		7BAFF5C42780B26D00051F59 /* iOSDevPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAFF5C32780B26D00051F59 /* iOSDevPackage */; };
 		7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */; };
 		7BAFF5CC2780BF5300051F59 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */; };
+		7BAFF5CF2780D38200051F59 /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5CE2780D38200051F59 /* MenuButton.swift */; };
+		7BAFF5D12780D55600051F59 /* View+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */; };
+		7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D22780E37800051F59 /* Toolbar.swift */; };
+		7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */; };
+		7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */; };
+		7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DA2781BE3900051F59 /* EditViewView.swift */; };
+		7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */; };
+		7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DE2781BE7800051F59 /* VoiceView.swift */; };
+		7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5E02781BE9600051F59 /* ShareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +75,15 @@
 		7BAFF5C02780AEAC00051F59 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+CustomFont.swift"; sourceTree = "<group>"; };
 		7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		7BAFF5CE2780D38200051F59 /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CornerRadius.swift"; sourceTree = "<group>"; };
+		7BAFF5D22780E37800051F59 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
+		7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPage.swift; sourceTree = "<group>"; };
+		7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePictureView.swift; sourceTree = "<group>"; };
+		7BAFF5DA2781BE3900051F59 /* EditViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewView.swift; sourceTree = "<group>"; };
+		7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPointsView.swift; sourceTree = "<group>"; };
+		7BAFF5DE2781BE7800051F59 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
+		7BAFF5E02781BE9600051F59 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +196,15 @@
 		7BAFF5BC2780AE7C00051F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7BAFF5CD2780D36600051F59 /* Components */,
 				7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */,
 				7BAFF5832780A4CA00051F59 /* ContentView.swift */,
+				7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */,
+				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
+				7BAFF5DA2781BE3900051F59 /* EditViewView.swift */,
+				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
+				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
+				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -197,8 +222,18 @@
 			isa = PBXGroup;
 			children = (
 				7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */,
+				7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7BAFF5CD2780D36600051F59 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF5CE2780D38200051F59 /* MenuButton.swift */,
+				7BAFF5D22780E37800051F59 /* Toolbar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,9 +400,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */,
 				7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */,
+				7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */,
+				7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */,
 				7BAFF5BF2780AE9F00051F59 /* AppImageNames.swift in Sources */,
+				7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */,
+				7BAFF5CF2780D38200051F59 /* MenuButton.swift in Sources */,
+				7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */,
+				7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */,
 				7BAFF5C12780AEAC00051F59 /* AppColors.swift in Sources */,
+				7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */,
+				7BAFF5D12780D55600051F59 /* View+CornerRadius.swift in Sources */,
 				7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */,
 				7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */,
 			);
