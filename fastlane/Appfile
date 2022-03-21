@@ -1,0 +1,8 @@
+app_identifier("com.issart.TalkingImages") # The bundle identifier of your app
+apple_id("anna.sheptalinaa@gmail.com") # Your Apple email address
+team_name("ISS Art, Ltd.")
+team_id("HRA638G7C3")
+itc_team_name "ISS Art, Ltd."
+itc_team_id "321917"
+# For more information about the Appfile, see:
+#     https://docs.fastlane.tools/advanced/#appfile

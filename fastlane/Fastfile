@@ -1,0 +1,30 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Upload new builds to TestFlight"
+  lane :tf_upload do
+    get_certificates           # invokes cert
+    get_provisioning_profile   # invokes sigh
+    #sync_code_signing
+    #disable_automatic_code_signing(path: "TalkingImages.xcodeproj")
+    build_app(scheme: "TalkingImages")
+    #enable_automatic_code_signing(path: "TalkingImages.xcodeproj")
+    upload_to_testflight    
+    # add actions here: https://docs.fastlane.tools/actions
+  end
+end
