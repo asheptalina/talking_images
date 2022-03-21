@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct AlertView: View {
-    
+
     var title = ""
     var actions: [AlertAction] = []
-    
+
     var body: some View {
         alertView()
     }
-    
+
     private func alertView() -> some View {
         return VStack {
             Text(self.title)
@@ -18,7 +18,7 @@ struct AlertView: View {
                 .padding(.vertical, 20)
                 .padding(.horizontal, 16)
             ForEach(self.actions, id: \.self) { action in
-                Button(action: action.action) { 
+                Button(action: action.action) {
                     Text(action.label)
                         .foregroundColor(.white)
                         .customFont(.semiBold, .medium)
@@ -33,15 +33,15 @@ struct AlertView: View {
 }
 
 struct AlertAction: Equatable, Hashable {
-    
+
     var label: String
-    var action: () -> ()
+    var action: () -> Void
     var isCancel = false
-    
+
     static func == (lhs: AlertAction, rhs: AlertAction) -> Bool {
         return lhs.label == rhs.label && lhs.isCancel == rhs.isCancel
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(self.label)
         hasher.combine(self.isCancel)

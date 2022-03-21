@@ -3,9 +3,9 @@ import SwiftUI
 struct VoiceView: View {
     
     @EnvironmentObject var voiceViewModel: VoiceViewModel
-    
+
     let recordButtonSize: CGFloat = 90
-    
+
     var body: some View {
         if voiceViewModel.isPlaying {
             self.playRecordView(isPlaying: true)
@@ -17,7 +17,7 @@ struct VoiceView: View {
             self.playRecordView(isPlaying: false)
         }
     }
-    
+
     private func startRecordView() -> some View {
         VStack {
             ZStack {
@@ -35,7 +35,7 @@ struct VoiceView: View {
                 .foregroundColor(GREY_TEXT_COLOR)
         }
     }
-    
+
     private func playRecordView(isPlaying: Bool) -> some View {
         return VStack {
             ZStack {
@@ -55,23 +55,23 @@ struct VoiceView: View {
                     .customFont(.semiBold, .medium)
                     .foregroundColor(TEXT_COLOR)
                 Slider(
-                    value: self.$voiceViewModel.speedValue, 
+                    value: self.$voiceViewModel.speedValue,
                     in: -50...50
                 )
             }
-            
-            HStack { 
+
+            HStack {
                 Text("Pitch")
                     .customFont(.semiBold, .medium)
                     .foregroundColor(TEXT_COLOR)
                 Slider(
-                    value: self.$voiceViewModel.pitchValue, 
+                    value: self.$voiceViewModel.pitchValue,
                     in: -50...50
                 )
             }
         }
     }
-    
+
     private func recordButton() -> some View {
         return ZStack {
             Circle()
@@ -83,7 +83,7 @@ struct VoiceView: View {
                 .frame(width: recordButtonSize - 24, height: recordButtonSize - 24)
         }
     }
-    
+
 }
 
 struct VoiceView_Previews: PreviewProvider {

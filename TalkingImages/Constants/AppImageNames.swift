@@ -10,5 +10,3 @@ let CAMERA_ICON = "camera_icon"
 let ROTATE_LEFT_ICON = "rotate_left_icon"
 let ROTATE_RIGHT_ICON = "rotate_right_icon"
 let ROTATE_RESET_ICON = "rotate_reset_icon"
-
-

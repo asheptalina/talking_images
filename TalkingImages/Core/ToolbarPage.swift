@@ -1,38 +1,38 @@
 import SwiftUI
 
 enum ToolbarPage {
-    case ChoosePicture
-    case Edit
-    case SetPoints
-    case Voice
-    case Share
-    
+    case choosePicture
+    case edit
+    case setPoints
+    case voice
+    case share
+
     var imageName: String {
         switch self {
-        case .ChoosePicture:
+        case .choosePicture:
             return MENU_CHOOSE_PICTURE
-        case .Edit:
+        case .edit:
             return MENU_EDIT
-        case .SetPoints:
+        case .setPoints:
             return MENU_SET_POINTS
-        case .Voice:
+        case .voice:
             return MENU_VOICE
-        case .Share:
+        case .share:
             return MENU_SHARE
         }
     }
-    
+
     var color: Color {
         switch self {
-        case .ChoosePicture:
+        case .choosePicture:
             return MENU_CHOOSE_PICTURE_COLOR
-        case .Edit:
+        case .edit:
             return MENU_EDIT_COLOR
-        case .SetPoints:
+        case .setPoints:
             return MENU_SET_POINTS_COLOR
-        case .Voice:
+        case .voice:
             return MENU_VOICE_COLOR
-        case .Share:
+        case .share:
             return MENU_SHARE_COLOR
         }
     }

@@ -26,4 +26,3 @@ let RECORD_BUTTON_COLOR = Color.init(hex: 0xF1555C)
 let DOWNLOAD_BUTTON_COLOR = Color.init(hex: 0x58CCB0)
 let SHARE_BUTTON_COLOR = Color.init(hex: 0x8AB2ED)
 let CREATE_NEW_BUTTON_COLOR = Color.init(hex: 0xBA95E0)
-

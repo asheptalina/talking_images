@@ -1,33 +1,33 @@
 import SwiftUI
 
 struct MenuButton: View {
-    
+
     var imageName: String
     var color: Color
     var isActive: Bool
     var itemIndex: Int
     var itemWidth: CGFloat
-    
-    var action: () -> ()
-    
+
+    var action: () -> Void
+
     var width: CGFloat {
         self.itemWidth * CGFloat(self.itemIndex)
     }
-    
+
     var height: CGFloat {
         self.isActive ? self.activeHeightCoef * self.itemWidth : self.inactiveHeightCoef * self.itemWidth
     }
-    
+
     //  UI constants
     private let cornerRadius = 32.0
     private let activeHeightCoef = 0.86
     private let inactiveHeightCoef = 0.78
     private let iconWidthCoef = 0.4
-    
+
     var body: some View {
-        Button { 
+        Button {
             self.action()
-        } label: { 
+        } label: {
             HStack(spacing: 0) {
                 Spacer()
                 Image(imageName)
@@ -42,7 +42,7 @@ struct MenuButton: View {
         .background(self.color)
         .cornerRadius(self.cornerRadius, corners: .topRight)
     }
-    
+
 }
 
 struct MenuButton_Previews: PreviewProvider {

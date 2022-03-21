@@ -1,32 +1,32 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    @State var toolbarState = ToolbarPage.ChoosePicture
-    
-    let toolbarItems: [ToolbarPage] = [.ChoosePicture, .Edit, .SetPoints, .Voice, .Share]
-    
+
+    @State var toolbarState = ToolbarPage.choosePicture
+
+    let toolbarItems: [ToolbarPage] = [.choosePicture, .edit, .setPoints, .voice, .share]
+
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 VStack {
                     switch toolbarState {
-                    case .ChoosePicture:
-                        ChoosePictureView { 
-                            self.toolbarState = .Edit
+                    case .choosePicture:
+                        ChoosePictureView {
+                            self.toolbarState = .edit
                         }
-                    case .Edit:
+                    case .edit:
                         EditViewView()
-                    case .SetPoints:
+                    case .setPoints:
                         SetPointsView()
-                    case .Voice:
+                    case .voice:
                         VoiceView()
-                    case .Share:
-                        ShareView { 
-                            self.toolbarState = .ChoosePicture
+                    case .share:
+                        ShareView {
+                            self.toolbarState = .choosePicture
                         }
                     }
-                    
+
                     Spacer()
                 }
                 VStack {
@@ -36,16 +36,16 @@ struct ContentView: View {
             }
         }.edgesIgnoringSafeArea(.bottom)
     }
-    
+
     private func getToolbar(screenWidth: CGFloat) -> some View {
         return ZStack(alignment: .bottomLeading) {
             ForEach((1...self.toolbarItems.count).reversed(), id: \.self) { idx in
                 let item = self.toolbarItems[idx - 1]
                 MenuButton(
                     imageName: item.imageName,
-                    color: item.color, 
-                    isActive: self.toolbarState == item, 
-                    itemIndex: idx, 
+                    color: item.color,
+                    isActive: self.toolbarState == item,
+                    itemIndex: idx,
                     itemWidth: screenWidth / 5.0
                 ) {
                     self.toolbarState = item

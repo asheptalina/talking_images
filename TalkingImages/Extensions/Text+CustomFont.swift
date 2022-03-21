@@ -23,15 +23,13 @@ extension ContentSizeCategory {
     }
 }
 
-
 extension Text {
     func customFont(_ font: BalooBhaijaan2, _ sizeCategory: ContentSizeCategory, color: Color = .black) -> some View {
         return self.customFont(font, sizeCategory.size, color: color)
     }
-    
+
     func customFont(_ font: BalooBhaijaan2, _ size: CGFloat, color: Color = .black) -> some View {
         return self.font(.custom(font.rawValue, size: size))
             .foregroundColor(color)
     }
 }
-

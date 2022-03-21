@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct ShareView: View {
-    
-    var onCreateNewButton: () -> ()
-    
+
+    var onCreateNewButton: () -> Void
+
     var body: some View {
         VStack {
             HStack {
@@ -13,11 +13,11 @@ struct ShareView: View {
             createNewButton()
         }
     }
-    
+
     func downloadButton() -> some View {
-        return Button { 
+        return Button {
             // TODO: download
-        } label: { 
+        } label: {
             HStack {
                 Image("download_icon")
                     .resizable()
@@ -33,11 +33,11 @@ struct ShareView: View {
         .background(DOWNLOAD_BUTTON_COLOR)
         .cornerRadius(10.0)
     }
-    
+
     func shareButton() -> some View {
-        return Button { 
+        return Button {
             // TODO: share
-        } label: { 
+        } label: {
             HStack {
                 Image("share_icon")
                     .resizable()
@@ -53,11 +53,11 @@ struct ShareView: View {
         .background(SHARE_BUTTON_COLOR)
         .cornerRadius(10.0)
     }
-    
+
     func createNewButton() -> some View {
-        return Button { 
+        return Button {
             self.onCreateNewButton()
-        } label: { 
+        } label: {
             HStack {
                 Text("Create new animation")
                     .foregroundColor(.white)

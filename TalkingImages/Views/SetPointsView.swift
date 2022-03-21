@@ -26,13 +26,13 @@ import SwiftUI
 //}
 
 struct SetPointsView: View {
-    
+
     @EnvironmentObject var viewModel: TalkingImagesViewModel
-    
+
     @State private var pointyEars = true
-    
+
     private let title = "You can set the points manually"
-    
+
     @State private var head1Position = CGSize(width: 30, height: 50)
     @State private var head2Position = CGSize(width: 60, height: 50)
     @State private var head3Position = CGSize(width: 45, height: 30)
@@ -44,7 +44,7 @@ struct SetPointsView: View {
     @State private var chinPosition = CGSize(width: 10, height: 50)
     @State private var ear1Position = CGSize(width: 10, height: 50)
     @State private var ear2Position = CGSize(width: 10, height: 50)
-    
+
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -61,30 +61,28 @@ struct SetPointsView: View {
                     PointView(title: "mouth", position: self.$mouth2Position)
                     PointView(title: "mouth", position: self.$mouth3Position)
                     PointView(title: "chin", position: self.$chinPosition)
-                    
 //                    PointView(title: "ear", position: self.$ear1Position)
 //                    PointView(title: "ear", position: self.$ear2Position)
                 }.frame(width: geometry.size.width, height: geometry.size.width)
-                
+
                 Text(self.title)
                     .customFont(.semiBold, .medium)
-                Toggle(isOn: self.$pointyEars) { 
+                Toggle(isOn: self.$pointyEars) {
                     Text("Pointy ears")
                         .customFont(.semiBold, .medium)
                 }
-                
             }
         }
-    }    
+    }
 }
 
 struct PointView: View {
-    
-    var title: String 
-    
+
+    var title: String
+
     @Binding var position: CGSize
     @GestureState private var dragOffset = CGSize.zero
-    
+
     var body: some View {
         HStack {
             Text(title)
