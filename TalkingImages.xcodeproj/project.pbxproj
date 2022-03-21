@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */; };
+		7B4BAFA127DF80FE00FC17C1 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */; };
+		7B7A8B052799A3000053DD39 /* TalkingImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */; };
+		7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B072799C6090053DD39 /* CropImageView.swift */; };
 		7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */; };
 		7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5832780A4CA00051F59 /* ContentView.swift */; };
 		7BAFF5862780A4CD00051F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5852780A4CD00051F59 /* Assets.xcassets */; };
@@ -34,6 +38,8 @@
 		7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */; };
 		7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DE2781BE7800051F59 /* VoiceView.swift */; };
 		7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5E02781BE9600051F59 /* ShareView.swift */; };
+		7BC7AFDA27BFAA30009ABB49 /* VoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */; };
+		7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +60,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
+		7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesViewModel.swift; sourceTree = "<group>"; };
+		7B7A8B072799C6090053DD39 /* CropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageView.swift; sourceTree = "<group>"; };
 		7BAFF57E2780A4CA00051F59 /* TalkingImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkingImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesApp.swift; sourceTree = "<group>"; };
 		7BAFF5832780A4CA00051F59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -84,6 +94,8 @@
 		7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPointsView.swift; sourceTree = "<group>"; };
 		7BAFF5DE2781BE7800051F59 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
 		7BAFF5E02781BE9600051F59 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewModel.swift; sourceTree = "<group>"; };
+		7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +124,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B7A8B012799A1EF0053DD39 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
+				7BAFF5DA2781BE3900051F59 /* EditViewView.swift */,
+				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
+				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
+				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
+				7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */,
+				7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B7A8B022799A1F80053DD39 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */,
+				7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7B7A8B062799C5EC0053DD39 /* Crop */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A8B072799C6090053DD39 /* CropImageView.swift */,
+			);
+			path = Crop;
+			sourceTree = "<group>";
+		};
 		7BAFF5752780A4CA00051F59 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +179,9 @@
 		7BAFF5802780A4CA00051F59 /* TalkingImages */ = {
 			isa = PBXGroup;
 			children = (
+				7B7A8B062799C5EC0053DD39 /* Crop */,
+				7B7A8B022799A1F80053DD39 /* ViewModels */,
+				7B7A8B012799A1EF0053DD39 /* Views */,
 				7BAFF5C52780B37300051F59 /* Extensions */,
 				7BAFF5BD2780AE8B00051F59 /* Constants */,
 				7BAFF5BC2780AE7C00051F59 /* Core */,
@@ -200,11 +246,6 @@
 				7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */,
 				7BAFF5832780A4CA00051F59 /* ContentView.swift */,
 				7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */,
-				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
-				7BAFF5DA2781BE3900051F59 /* EditViewView.swift */,
-				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
-				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
-				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -223,6 +264,7 @@
 			children = (
 				7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */,
 				7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */,
+				7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -400,19 +442,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */,
 				7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */,
 				7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */,
 				7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */,
 				7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */,
 				7BAFF5BF2780AE9F00051F59 /* AppImageNames.swift in Sources */,
 				7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */,
+				7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */,
 				7BAFF5CF2780D38200051F59 /* MenuButton.swift in Sources */,
 				7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */,
+				7B4BAFA127DF80FE00FC17C1 /* UIImage+Rotate.swift in Sources */,
 				7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */,
 				7BAFF5C12780AEAC00051F59 /* AppColors.swift in Sources */,
+				7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */,
 				7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */,
 				7BAFF5D12780D55600051F59 /* View+CornerRadius.swift in Sources */,
 				7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */,
+				7B7A8B052799A3000053DD39 /* TalkingImagesViewModel.swift in Sources */,
+				7BC7AFDA27BFAA30009ABB49 /* VoiceViewModel.swift in Sources */,
 				7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,7 +631,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +662,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
