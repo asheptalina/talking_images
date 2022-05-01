@@ -12,13 +12,13 @@ extension ContentSizeCategory {
     var size: CGFloat {
         switch self {
         case .small:
-            return 20
+            return 18
         case .medium:
-            return 24
+            return 22
         case .large:
-            return 36
+            return 30
         default:
-            return 24
+            return 22
         }
     }
 }

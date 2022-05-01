@@ -25,8 +25,7 @@ struct ShareView: View {
                     .frame(width: 30, height: 30)
                     .padding(.vertical, 25.0)
                 Text("Download")
-                    .foregroundColor(.white)
-                    .customFont(.extraBold, .medium)
+                    .customFont(.extraBold, .medium, color: .white)
                     .padding(.vertical, 20)
             }.padding(.horizontal, 20)
         }
@@ -45,8 +44,7 @@ struct ShareView: View {
                     .frame(width: 30, height: 30)
                     .padding(.vertical, 25.0)
                 Text("Share")
-                    .foregroundColor(.white)
-                    .customFont(.extraBold, .medium)
+                    .customFont(.extraBold, .medium, color: .white)
                     .padding(.vertical, 20)
             }.padding(.horizontal, 20)
         }
@@ -60,8 +58,7 @@ struct ShareView: View {
         } label: {
             HStack {
                 Text("Create new animation")
-                    .foregroundColor(.white)
-                    .customFont(.extraBold, .medium)
+                    .customFont(.extraBold, .medium, color: .white)
                     .padding(.vertical, 20)
             }.padding(.horizontal, 20)
         }

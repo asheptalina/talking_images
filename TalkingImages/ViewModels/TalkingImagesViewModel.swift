@@ -4,8 +4,8 @@ import SwiftUI
 class TalkingImagesViewModel: ObservableObject {
 
     //    @Published var toolbarState = ToolbarPage.ChoosePicture
-    @Published var rawImage: Image?
-    @Published var image: Image?
+    @Published var rawImage: UIImage?
+    @Published var image: UIImage?
     @Published var points: [CGPoint] = []
 
     func clear() {

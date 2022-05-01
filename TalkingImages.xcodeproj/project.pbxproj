@@ -9,15 +9,23 @@
 /* Begin PBXBuildFile section */
 		7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */; };
 		7B4BAFA127DF80FE00FC17C1 /* UIImage+Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */; };
+		7B4DCCDD281BEF6800293A8F /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCDC281BEF6800293A8F /* RecordView.swift */; };
+		7B4DCCDF281BF41F00293A8F /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCDE281BF41F00293A8F /* PlayView.swift */; };
+		7B4DCCE2281BF4CC00293A8F /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCE1281BF4CC00293A8F /* Store.swift */; };
+		7B4DCCE4281BF53400293A8F /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCE3281BF53400293A8F /* Reducers.swift */; };
+		7B4DCCE6281BF56500293A8F /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCE5281BF56500293A8F /* AppAction.swift */; };
+		7B4DCCE8281BF5C600293A8F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCE7281BF5C600293A8F /* AppState.swift */; };
+		7B4DCCEA281C7C1000293A8F /* AVAudioFile+Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCE9281C7C1000293A8F /* AVAudioFile+Duration.swift */; };
+		7B4DCCEC281D3D5A00293A8F /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCEB281D3D5A00293A8F /* AppEnvironment.swift */; };
+		7B4DCCEE281D40B700293A8F /* VoiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCED281D40B700293A8F /* VoiceService.swift */; };
+		7B4DCCF1281D557B00293A8F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCF0281D557B00293A8F /* AlertAction.swift */; };
 		7B7A8B052799A3000053DD39 /* TalkingImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */; };
 		7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B072799C6090053DD39 /* CropImageView.swift */; };
+		7BA50E10281DB373003BB40C /* Contours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA50E0F281DB372003BB40C /* Contours.swift */; };
 		7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */; };
 		7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5832780A4CA00051F59 /* ContentView.swift */; };
 		7BAFF5862780A4CD00051F59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5852780A4CD00051F59 /* Assets.xcassets */; };
 		7BAFF5892780A4CD00051F59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5882780A4CD00051F59 /* Preview Assets.xcassets */; };
-		7BAFF5932780A4CD00051F59 /* TalkingImagesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5922780A4CD00051F59 /* TalkingImagesTests.swift */; };
-		7BAFF59D2780A4CD00051F59 /* TalkingImagesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF59C2780A4CD00051F59 /* TalkingImagesUITests.swift */; };
-		7BAFF59F2780A4CD00051F59 /* TalkingImagesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF59E2780A4CD00051F59 /* TalkingImagesUITestsLaunchTests.swift */; };
 		7BAFF5B52780ADA800051F59 /* BalooBhaijaan2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5B02780ADA800051F59 /* BalooBhaijaan2-Regular.ttf */; };
 		7BAFF5B62780ADA800051F59 /* BalooBhaijaan2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5B12780ADA800051F59 /* BalooBhaijaan2-Bold.ttf */; };
 		7BAFF5B72780ADA800051F59 /* BalooBhaijaan2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BAFF5B22780ADA800051F59 /* BalooBhaijaan2-ExtraBold.ttf */; };
@@ -40,40 +48,32 @@
 		7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5E02781BE9600051F59 /* ShareView.swift */; };
 		7BC7AFDA27BFAA30009ABB49 /* VoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */; };
 		7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */; };
+		7BDFD7DA280BFC63003E6F72 /* CropCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFD7D9280BFC63003E6F72 /* CropCorner.swift */; };
+		7BDFD7DC280BFC95003E6F72 /* LineSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFD7DB280BFC95003E6F72 /* LineSegment.swift */; };
+		7BDFD7DE280BFCC1003E6F72 /* RectHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFD7DD280BFCC1003E6F72 /* RectHole.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7BAFF58F2780A4CD00051F59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BAFF5762780A4CA00051F59 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BAFF57D2780A4CA00051F59;
-			remoteInfo = TalkingImages;
-		};
-		7BAFF5992780A4CD00051F59 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7BAFF5762780A4CA00051F59 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BAFF57D2780A4CA00051F59;
-			remoteInfo = TalkingImages;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotate.swift"; sourceTree = "<group>"; };
+		7B4DCCDC281BEF6800293A8F /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		7B4DCCDE281BF41F00293A8F /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		7B4DCCE1281BF4CC00293A8F /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7B4DCCE3281BF53400293A8F /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		7B4DCCE5281BF56500293A8F /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		7B4DCCE7281BF5C600293A8F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		7B4DCCE9281C7C1000293A8F /* AVAudioFile+Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioFile+Duration.swift"; sourceTree = "<group>"; };
+		7B4DCCEB281D3D5A00293A8F /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		7B4DCCED281D40B700293A8F /* VoiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceService.swift; sourceTree = "<group>"; };
+		7B4DCCF0281D557B00293A8F /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesViewModel.swift; sourceTree = "<group>"; };
 		7B7A8B072799C6090053DD39 /* CropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageView.swift; sourceTree = "<group>"; };
+		7BA50E0F281DB372003BB40C /* Contours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contours.swift; sourceTree = "<group>"; };
 		7BAFF57E2780A4CA00051F59 /* TalkingImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkingImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesApp.swift; sourceTree = "<group>"; };
 		7BAFF5832780A4CA00051F59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7BAFF5852780A4CD00051F59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BAFF5882780A4CD00051F59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7BAFF58E2780A4CD00051F59 /* TalkingImagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkingImagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BAFF5922780A4CD00051F59 /* TalkingImagesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesTests.swift; sourceTree = "<group>"; };
-		7BAFF5982780A4CD00051F59 /* TalkingImagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkingImagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BAFF59C2780A4CD00051F59 /* TalkingImagesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesUITests.swift; sourceTree = "<group>"; };
-		7BAFF59E2780A4CD00051F59 /* TalkingImagesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7BAFF5AE2780ACC200051F59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7BAFF5B02780ADA800051F59 /* BalooBhaijaan2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaijaan2-Regular.ttf"; sourceTree = "<group>"; };
 		7BAFF5B12780ADA800051F59 /* BalooBhaijaan2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BalooBhaijaan2-Bold.ttf"; sourceTree = "<group>"; };
@@ -96,6 +96,9 @@
 		7BAFF5E02781BE9600051F59 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewModel.swift; sourceTree = "<group>"; };
 		7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		7BDFD7D9280BFC63003E6F72 /* CropCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCorner.swift; sourceTree = "<group>"; };
+		7BDFD7DB280BFC95003E6F72 /* LineSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSegment.swift; sourceTree = "<group>"; };
+		7BDFD7DD280BFCC1003E6F72 /* RectHole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectHole.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,30 +110,55 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BAFF58B2780A4CD00051F59 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BAFF5952780A4CD00051F59 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B4DCCDA281BEF3C00293A8F /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				7B4DCCDB281BEF4B00293A8F /* Components */,
+				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		7B4DCCDB281BEF4B00293A8F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7B4DCCDC281BEF6800293A8F /* RecordView.swift */,
+				7B4DCCDE281BF41F00293A8F /* PlayView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		7B4DCCE0281BF4BA00293A8F /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				7B4DCCE1281BF4CC00293A8F /* Store.swift */,
+				7B4DCCE3281BF53400293A8F /* Reducers.swift */,
+				7B4DCCE5281BF56500293A8F /* AppAction.swift */,
+				7B4DCCE7281BF5C600293A8F /* AppState.swift */,
+				7B4DCCEB281D3D5A00293A8F /* AppEnvironment.swift */,
+				7B4DCCED281D40B700293A8F /* VoiceService.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		7B4DCCEF281D556E00293A8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B4DCCF0281D557B00293A8F /* AlertAction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7B7A8B012799A1EF0053DD39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7BA50E0D281DB347003BB40C /* Points */,
+				7B4DCCDA281BEF3C00293A8F /* Voice */,
 				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
 				7BAFF5DA2781BE3900051F59 /* EditViewView.swift */,
-				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
-				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
 				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
 				7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */,
 				7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */,
@@ -151,8 +179,28 @@
 			isa = PBXGroup;
 			children = (
 				7B7A8B072799C6090053DD39 /* CropImageView.swift */,
+				7BDFD7D9280BFC63003E6F72 /* CropCorner.swift */,
+				7BDFD7DB280BFC95003E6F72 /* LineSegment.swift */,
+				7BDFD7DD280BFCC1003E6F72 /* RectHole.swift */,
 			);
 			path = Crop;
+			sourceTree = "<group>";
+		};
+		7BA50E0D281DB347003BB40C /* Points */ = {
+			isa = PBXGroup;
+			children = (
+				7BA50E0E281DB361003BB40C /* Components */,
+				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
+			);
+			path = Points;
+			sourceTree = "<group>";
+		};
+		7BA50E0E281DB361003BB40C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7BA50E0F281DB372003BB40C /* Contours.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		7BAFF5752780A4CA00051F59 = {
@@ -160,8 +208,6 @@
 			children = (
 				7BAFF5CB2780BF5300051F59 /* .swiftlint.yml */,
 				7BAFF5802780A4CA00051F59 /* TalkingImages */,
-				7BAFF5912780A4CD00051F59 /* TalkingImagesTests */,
-				7BAFF59B2780A4CD00051F59 /* TalkingImagesUITests */,
 				7BAFF57F2780A4CA00051F59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -170,8 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				7BAFF57E2780A4CA00051F59 /* TalkingImages.app */,
-				7BAFF58E2780A4CD00051F59 /* TalkingImagesTests.xctest */,
-				7BAFF5982780A4CD00051F59 /* TalkingImagesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +223,8 @@
 		7BAFF5802780A4CA00051F59 /* TalkingImages */ = {
 			isa = PBXGroup;
 			children = (
+				7B4DCCEF281D556E00293A8F /* Model */,
+				7B4DCCE0281BF4BA00293A8F /* Redux */,
 				7B7A8B062799C5EC0053DD39 /* Crop */,
 				7B7A8B022799A1F80053DD39 /* ViewModels */,
 				7B7A8B012799A1EF0053DD39 /* Views */,
@@ -199,23 +245,6 @@
 				7BAFF5882780A4CD00051F59 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		7BAFF5912780A4CD00051F59 /* TalkingImagesTests */ = {
-			isa = PBXGroup;
-			children = (
-				7BAFF5922780A4CD00051F59 /* TalkingImagesTests.swift */,
-			);
-			path = TalkingImagesTests;
-			sourceTree = "<group>";
-		};
-		7BAFF59B2780A4CD00051F59 /* TalkingImagesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7BAFF59C2780A4CD00051F59 /* TalkingImagesUITests.swift */,
-				7BAFF59E2780A4CD00051F59 /* TalkingImagesUITestsLaunchTests.swift */,
-			);
-			path = TalkingImagesUITests;
 			sourceTree = "<group>";
 		};
 		7BAFF5AD2780ABBC00051F59 /* SupportFiles */ = {
@@ -265,6 +294,7 @@
 				7BAFF5C62780B39000051F59 /* Text+CustomFont.swift */,
 				7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */,
 				7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */,
+				7B4DCCE9281C7C1000293A8F /* AVAudioFile+Duration.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,42 +332,6 @@
 			productReference = 7BAFF57E2780A4CA00051F59 /* TalkingImages.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7BAFF58D2780A4CD00051F59 /* TalkingImagesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAFF5A52780A4CD00051F59 /* Build configuration list for PBXNativeTarget "TalkingImagesTests" */;
-			buildPhases = (
-				7BAFF58A2780A4CD00051F59 /* Sources */,
-				7BAFF58B2780A4CD00051F59 /* Frameworks */,
-				7BAFF58C2780A4CD00051F59 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7BAFF5902780A4CD00051F59 /* PBXTargetDependency */,
-			);
-			name = TalkingImagesTests;
-			productName = TalkingImagesTests;
-			productReference = 7BAFF58E2780A4CD00051F59 /* TalkingImagesTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7BAFF5972780A4CD00051F59 /* TalkingImagesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BAFF5A82780A4CD00051F59 /* Build configuration list for PBXNativeTarget "TalkingImagesUITests" */;
-			buildPhases = (
-				7BAFF5942780A4CD00051F59 /* Sources */,
-				7BAFF5952780A4CD00051F59 /* Frameworks */,
-				7BAFF5962780A4CD00051F59 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7BAFF59A2780A4CD00051F59 /* PBXTargetDependency */,
-			);
-			name = TalkingImagesUITests;
-			productName = TalkingImagesUITests;
-			productReference = 7BAFF5982780A4CD00051F59 /* TalkingImagesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -350,14 +344,6 @@
 				TargetAttributes = {
 					7BAFF57D2780A4CA00051F59 = {
 						CreatedOnToolsVersion = 13.0;
-					};
-					7BAFF58D2780A4CD00051F59 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 7BAFF57D2780A4CA00051F59;
-					};
-					7BAFF5972780A4CD00051F59 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 7BAFF57D2780A4CA00051F59;
 					};
 				};
 			};
@@ -378,8 +364,6 @@
 			projectRoot = "";
 			targets = (
 				7BAFF57D2780A4CA00051F59 /* TalkingImages */,
-				7BAFF58D2780A4CD00051F59 /* TalkingImagesTests */,
-				7BAFF5972780A4CD00051F59 /* TalkingImagesUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -398,20 +382,6 @@
 				7BAFF5BB2780AE6300051F59 /* Localizable.strings in Resources */,
 				7BAFF5B62780ADA800051F59 /* BalooBhaijaan2-Bold.ttf in Resources */,
 				7BAFF5862780A4CD00051F59 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BAFF58C2780A4CD00051F59 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BAFF5962780A4CD00051F59 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,60 +412,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA50E10281DB373003BB40C /* Contours.swift in Sources */,
 				7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */,
 				7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */,
 				7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */,
 				7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */,
+				7BDFD7DA280BFC63003E6F72 /* CropCorner.swift in Sources */,
+				7B4DCCEE281D40B700293A8F /* VoiceService.swift in Sources */,
+				7B4DCCF1281D557B00293A8F /* AlertAction.swift in Sources */,
 				7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */,
 				7BAFF5BF2780AE9F00051F59 /* AppImageNames.swift in Sources */,
+				7B4DCCE2281BF4CC00293A8F /* Store.swift in Sources */,
 				7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */,
 				7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */,
 				7BAFF5CF2780D38200051F59 /* MenuButton.swift in Sources */,
 				7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */,
 				7B4BAFA127DF80FE00FC17C1 /* UIImage+Rotate.swift in Sources */,
 				7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */,
+				7B4DCCDD281BEF6800293A8F /* RecordView.swift in Sources */,
 				7BAFF5C12780AEAC00051F59 /* AppColors.swift in Sources */,
+				7BDFD7DE280BFCC1003E6F72 /* RectHole.swift in Sources */,
 				7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */,
 				7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */,
+				7B4DCCDF281BF41F00293A8F /* PlayView.swift in Sources */,
 				7BAFF5D12780D55600051F59 /* View+CornerRadius.swift in Sources */,
+				7B4DCCEA281C7C1000293A8F /* AVAudioFile+Duration.swift in Sources */,
+				7B4DCCEC281D3D5A00293A8F /* AppEnvironment.swift in Sources */,
+				7B4DCCE6281BF56500293A8F /* AppAction.swift in Sources */,
+				7BDFD7DC280BFC95003E6F72 /* LineSegment.swift in Sources */,
 				7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */,
 				7B7A8B052799A3000053DD39 /* TalkingImagesViewModel.swift in Sources */,
+				7B4DCCE8281BF5C600293A8F /* AppState.swift in Sources */,
+				7B4DCCE4281BF53400293A8F /* Reducers.swift in Sources */,
 				7BC7AFDA27BFAA30009ABB49 /* VoiceViewModel.swift in Sources */,
 				7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BAFF58A2780A4CD00051F59 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BAFF5932780A4CD00051F59 /* TalkingImagesTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BAFF5942780A4CD00051F59 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BAFF59D2780A4CD00051F59 /* TalkingImagesUITests.swift in Sources */,
-				7BAFF59F2780A4CD00051F59 /* TalkingImagesUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7BAFF5902780A4CD00051F59 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7BAFF57D2780A4CA00051F59 /* TalkingImages */;
-			targetProxy = 7BAFF58F2780A4CD00051F59 /* PBXContainerItemProxy */;
-		};
-		7BAFF59A2780A4CD00051F59 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7BAFF57D2780A4CA00051F59 /* TalkingImages */;
-			targetProxy = 7BAFF5992780A4CD00051F59 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7BAFF5A02780A4CD00051F59 /* Debug */ = {
@@ -676,102 +630,6 @@
 			};
 			name = Release;
 		};
-		7BAFF5A62780A4CD00051F59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HRA638G7C3;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkingImages.app/TalkingImages";
-			};
-			name = Debug;
-		};
-		7BAFF5A72780A4CD00051F59 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HRA638G7C3;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TalkingImages.app/TalkingImages";
-			};
-			name = Release;
-		};
-		7BAFF5A92780A4CD00051F59 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HRA638G7C3;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TalkingImages;
-			};
-			name = Debug;
-		};
-		7BAFF5AA2780A4CD00051F59 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = HRA638G7C3;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TalkingImages;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -789,24 +647,6 @@
 			buildConfigurations = (
 				7BAFF5A32780A4CD00051F59 /* Debug */,
 				7BAFF5A42780A4CD00051F59 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BAFF5A52780A4CD00051F59 /* Build configuration list for PBXNativeTarget "TalkingImagesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BAFF5A62780A4CD00051F59 /* Debug */,
-				7BAFF5A72780A4CD00051F59 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BAFF5A82780A4CD00051F59 /* Build configuration list for PBXNativeTarget "TalkingImagesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BAFF5A92780A4CD00051F59 /* Debug */,
-				7BAFF5AA2780A4CD00051F59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

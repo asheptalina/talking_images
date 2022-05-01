@@ -2,28 +2,35 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var toolbarState = ToolbarPage.choosePicture
+    @EnvironmentObject var store: AppStore
 
     let toolbarItems: [ToolbarPage] = [.choosePicture, .edit, .setPoints, .voice, .share]
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
+                BACKGROUND_COLOR
+                    .edgesIgnoringSafeArea(.all)
                 VStack {
-                    switch toolbarState {
+                    switch self.store.state.mainState.page {
                     case .choosePicture:
-                        ChoosePictureView {
-                            self.toolbarState = .edit
+                        ChoosePictureView { image in
+                            self.store.send(.image(action: .setRawImage(image)))
+                            self.store.send(.main(action: .setPage(.edit)))
                         }
                     case .edit:
-                        EditViewView()
+                        EditViewView(
+                            image: self.store.state.imageState.rawImage,
+                            onEditImage: { image in
+                                self.store.send(.image(action: .setProcessedImage(image)))
+                            })
                     case .setPoints:
                         SetPointsView()
                     case .voice:
                         VoiceView()
                     case .share:
                         ShareView {
-                            self.toolbarState = .choosePicture
+                            self.store.send(.main(action: .setPage(.choosePicture)))
                         }
                     }
 
@@ -32,6 +39,12 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     self.getToolbar(screenWidth: geometry.size.width)
+                }
+                if self.store.state.mainState.showAlert {
+                    if let title = self.store.state.mainState.alertTitle,
+                       let actions = self.store.state.mainState.alertActions {
+                        AlertView(title: title, actions: actions)
+                    }
                 }
             }
         }.edgesIgnoringSafeArea(.bottom)
@@ -44,11 +57,11 @@ struct ContentView: View {
                 MenuButton(
                     imageName: item.imageName,
                     color: item.color,
-                    isActive: self.toolbarState == item,
+                    isActive: self.store.state.mainState.page == item,
                     itemIndex: idx,
                     itemWidth: screenWidth / 5.0
                 ) {
-                    self.toolbarState = item
+                    self.store.send(.main(action: .setPage(item)))
                 }
             }
         }

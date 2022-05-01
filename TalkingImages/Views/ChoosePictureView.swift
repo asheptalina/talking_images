@@ -2,12 +2,10 @@ import SwiftUI
 
 struct ChoosePictureView: View {
 
-    @EnvironmentObject var viewModel: TalkingImagesViewModel
-
     @State private var showCameraImagePicker = false
     @State private var showGalleryImagePicker = false
 
-    var onComplete: () -> Void
+    var onImageSelect: (UIImage) -> Void
 
     let firstTimeTitleShownKey = "FirstTimeTitleShown"
 
@@ -30,34 +28,64 @@ struct ChoosePictureView: View {
     ]
 
     // UI constants
+    private let titlePaddingTopCoef = 0.1
+    private let titlePaddingHorizontalCoef = 0.09
+    private let titlePaddingBottomCoef = 0.07
+
     private let buttonsHeightCoef = 0.1
     private let buttonsIconHeightCoef = 0.47
+    private let buttonsSpacingCoef = 0.03
+    private let buttonsPaddingBottomCoef = 0.1
+
+    private let paddingHorizontalCoef = 0.03
+
+    private let appIconSizeCoef = 0.26
+    private let appIconPaddingTopCoef = 0.15
+    private let appIconPaddingLeadingCoef = 0.02
 
     var body: some View {
         GeometryReader { geometry in
-            VStack(spacing: 0.0) {
-                Text(self.getTitle())
-                    .customFont(.semiBold, .large)
-                    .padding(EdgeInsets(top: 50, leading: 45, bottom: 34, trailing: 51))
-
-                HStack(spacing: 16.0) {
-                    self.getGalleryButton(height: geometry.size.height * self.buttonsHeightCoef)
-                    self.getCameraButton(height: geometry.size.height * self.buttonsHeightCoef)
+            ZStack {
+                VStack {
+                    HStack {
+                        Spacer()
+                        Image(APP_ICON_SMALL)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(
+                                width: geometry.size.width * self.appIconSizeCoef,
+                                height: geometry.size.width * self.appIconSizeCoef
+                            )
+                            .padding(.top, geometry.size.width * self.appIconPaddingTopCoef)
+                            .padding(.leading, geometry.size.width * self.appIconPaddingLeadingCoef)
+                    }
+                    Spacer()
                 }
-                .padding(.bottom, 48)
+                VStack(spacing: 0.0) {
+                    Text(self.getTitle())
+                        .customFont(.semiBold, .large, color: TEXT_COLOR)
+                        .multilineTextAlignment(.center)
+                        .padding(EdgeInsets(
+                            top: geometry.size.width * self.titlePaddingTopCoef,
+                            leading: geometry.size.width * self.titlePaddingHorizontalCoef,
+                            bottom: geometry.size.width * self.titlePaddingBottomCoef,
+                            trailing: geometry.size.width * self.titlePaddingHorizontalCoef
+                        ))
 
-                self.getDefaultImages()
+                    HStack(spacing: geometry.size.width * self.buttonsSpacingCoef) {
+                        self.getGalleryButton(height: geometry.size.height * self.buttonsHeightCoef)
+                        self.getCameraButton(height: geometry.size.height * self.buttonsHeightCoef)
+                    }
+                    .padding(.bottom, geometry.size.width * self.buttonsPaddingBottomCoef)
+
+                    self.getDefaultImages()
+                }.padding(.horizontal, geometry.size.width * paddingHorizontalCoef)
             }
-            .padding(.horizontal, 16.0)
             .sheet(isPresented: self.$showCameraImagePicker) {
-                ImagePicker(sourceType: .camera, selectedImage: self.$viewModel.rawImage)
+                ImagePicker(sourceType: .camera, onImageSelect: self.onImageSelect)
             }
             .sheet(isPresented: self.$showGalleryImagePicker) {
-                ImagePicker(sourceType: .photoLibrary, selectedImage: self.$viewModel.rawImage)
-            }
-            .onChange(of: self.viewModel.rawImage) { _ in
-                self.viewModel.clear()
-                self.onComplete()
+                ImagePicker(sourceType: .photoLibrary, onImageSelect: self.onImageSelect)
             }
         }
     }
@@ -117,12 +145,13 @@ struct ChoosePictureView: View {
                 LazyVGrid(columns: [GridItem(), GridItem(), GridItem()], spacing: gridSpacing) {
                     ForEach(self.defaultPicturesNames, id: \.self) { imageName in
                         Group {
-                            let image = Image(imageName)
-                                .resizable()
                             Button {
-                                viewModel.rawImage = image
+                                if let image = UIImage(named: imageName) {
+                                    self.onImageSelect(image)
+                                }
                             } label: {
-                                image
+                                Image(imageName)
+                                    .resizable()
                                     .aspectRatio(contentMode: .fit)
                                     .frame(width: imageSize, height: imageSize)
                             }
@@ -137,6 +166,6 @@ struct ChoosePictureView: View {
 
 struct ChoosePictureView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoosePictureView(onComplete: {})
+        ChoosePictureView(onImageSelect: { _ in })
     }
 }

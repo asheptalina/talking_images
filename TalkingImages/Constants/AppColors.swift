@@ -6,6 +6,7 @@ let BACKGROUND_COLOR = Color.init(hex: 0xFFF8E7)
 let TEXT_COLOR = Color.init(hex: 0x545047)
 let GREY_TEXT_COLOR = Color.init(hex: 0xA3A3A3)
 let LIGHT_TEXT_COLOR = Color.init(hex: 0xFFFFFF)
+let SHADOW_COLOR = Color.init(hex: 0x083F31)
 
 let ACTIVE_MENU_ITEM_COLOR = Color.init(hex: 0xFFFFFF)
 let INACTIVE_MENU_ITEM_COLOR = Color.init(hex: 0x545047)
@@ -21,8 +22,12 @@ let CAMERA_BUTTON_COLOR = Color.init(hex: 0xBA95E0)
 
 // Voice Screen
 let RECORD_BUTTON_COLOR = Color.init(hex: 0xF1555C)
+let PAUSE_BUTTON_COLOR = TEXT_COLOR
 
 // Share Screen
 let DOWNLOAD_BUTTON_COLOR = Color.init(hex: 0x58CCB0)
 let SHARE_BUTTON_COLOR = Color.init(hex: 0x8AB2ED)
 let CREATE_NEW_BUTTON_COLOR = Color.init(hex: 0xBA95E0)
+
+// Alert
+let ALERT_COLOR = Color.init(hex: 0x8AB2ED)
