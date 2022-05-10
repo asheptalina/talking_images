@@ -13,8 +13,6 @@ class VoiceService {
 
     private var audioUrl: URL?
 
-    private let audioFileName = "talking_images_record.m4a"
-
     func startRecord() {
         let recordingSession = AVAudioSession.sharedInstance()
         do {
@@ -26,7 +24,7 @@ class VoiceService {
 
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
 
-        let fileName = path.appendingPathComponent(self.audioFileName)
+        let fileName = path.appendingPathComponent(AUDIO_FILE_NAME)
         self.audioUrl = fileName.absoluteURL
 
         let settings = [
@@ -57,14 +55,6 @@ class VoiceService {
             return
         }
 
-        let playSession = AVAudioSession.sharedInstance()
-
-        do {
-            try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-        } catch {
-            print("Playing failed in Device")
-        }
-
         do {
             let file = try AVAudioFile(forReading: playingURL)
 
@@ -86,7 +76,6 @@ class VoiceService {
                     onComplete()
                 }
             }
-            audioPlayer.scheduleFile(file, at: nil)
 
             try engine.start()
             audioPlayer.play()

@@ -42,10 +42,16 @@
 		7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D22780E37800051F59 /* Toolbar.swift */; };
 		7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */; };
 		7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */; };
-		7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DA2781BE3900051F59 /* EditViewView.swift */; };
+		7BAFF5DB2781BE3900051F59 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DA2781BE3900051F59 /* EditView.swift */; };
 		7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */; };
 		7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5DE2781BE7800051F59 /* VoiceView.swift */; };
 		7BAFF5E12781BE9600051F59 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5E02781BE9600051F59 /* ShareView.swift */; };
+		7BB525A32821553600D9FDD8 /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB525A22821553600D9FDD8 /* UIImage+Crop.swift */; };
+		7BB525E02827B5EE00D9FDD8 /* OpenCVWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB525DF2827B5EE00D9FDD8 /* OpenCVWrapper.m */; };
+		7BB525E42827B82800D9FDD8 /* UIImage+OpenCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BB525E32827B82800D9FDD8 /* UIImage+OpenCV.m */; };
+		7BB525EB2827BDD700D9FDD8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BB525EA2827BDD700D9FDD8 /* opencv2.framework */; };
+		7BB525EF28290D1F00D9FDD8 /* swift-video-generator in Frameworks */ = {isa = PBXBuildFile; productRef = 7BB525EE28290D1F00D9FDD8 /* swift-video-generator */; };
+		7BB525F1282911B900D9FDD8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB525F0282911B900D9FDD8 /* AppConstants.swift */; };
 		7BC7AFDA27BFAA30009ABB49 /* VoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */; };
 		7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */; };
 		7BDFD7DA280BFC63003E6F72 /* CropCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDFD7D9280BFC63003E6F72 /* CropCorner.swift */; };
@@ -90,10 +96,18 @@
 		7BAFF5D22780E37800051F59 /* Toolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toolbar.swift; sourceTree = "<group>"; };
 		7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarPage.swift; sourceTree = "<group>"; };
 		7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePictureView.swift; sourceTree = "<group>"; };
-		7BAFF5DA2781BE3900051F59 /* EditViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewView.swift; sourceTree = "<group>"; };
+		7BAFF5DA2781BE3900051F59 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPointsView.swift; sourceTree = "<group>"; };
 		7BAFF5DE2781BE7800051F59 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
 		7BAFF5E02781BE9600051F59 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		7BB525A22821553600D9FDD8 /* UIImage+Crop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Crop.swift"; sourceTree = "<group>"; };
+		7BB525DD2827B5EE00D9FDD8 /* TalkingImages-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TalkingImages-Bridging-Header.h"; sourceTree = "<group>"; };
+		7BB525DF2827B5EE00D9FDD8 /* OpenCVWrapper.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = OpenCVWrapper.m; sourceTree = "<group>"; };
+		7BB525E22827B80300D9FDD8 /* UIImage+OpenCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+OpenCV.h"; sourceTree = "<group>"; };
+		7BB525E32827B82800D9FDD8 /* UIImage+OpenCV.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "UIImage+OpenCV.m"; sourceTree = "<group>"; };
+		7BB525EA2827BDD700D9FDD8 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		7BB525EC2827BF2F00D9FDD8 /* OpenCVWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenCVWrapper.h; sourceTree = "<group>"; };
+		7BB525F0282911B900D9FDD8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		7BC7AFD927BFAA30009ABB49 /* VoiceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceViewModel.swift; sourceTree = "<group>"; };
 		7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		7BDFD7D9280BFC63003E6F72 /* CropCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropCorner.swift; sourceTree = "<group>"; };
@@ -106,7 +120,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB525EB2827BDD700D9FDD8 /* opencv2.framework in Frameworks */,
 				7BAFF5C42780B26D00051F59 /* iOSDevPackage in Frameworks */,
+				7BB525EF28290D1F00D9FDD8 /* swift-video-generator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,8 +132,7 @@
 		7B4DCCDA281BEF3C00293A8F /* Voice */ = {
 			isa = PBXGroup;
 			children = (
-				7B4DCCDB281BEF4B00293A8F /* Components */,
-				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
+				7B9A2973281E97C10073B54B /* View */,
 			);
 			path = Voice;
 			sourceTree = "<group>";
@@ -147,6 +162,7 @@
 		7B4DCCEF281D556E00293A8F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */,
 				7B4DCCF0281D557B00293A8F /* AlertAction.swift */,
 			);
 			path = Model;
@@ -155,13 +171,8 @@
 		7B7A8B012799A1EF0053DD39 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7BA50E0D281DB347003BB40C /* Points */,
-				7B4DCCDA281BEF3C00293A8F /* Voice */,
-				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
-				7BAFF5DA2781BE3900051F59 /* EditViewView.swift */,
-				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
-				7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */,
-				7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */,
+				7BAFF5CD2780D36600051F59 /* Component */,
+				7BAFF5832780A4CA00051F59 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,13 +197,80 @@
 			path = Crop;
 			sourceTree = "<group>";
 		};
-		7BA50E0D281DB347003BB40C /* Points */ = {
+		7B9A2972281E97B00073B54B /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7BA50E0E281DB361003BB40C /* Components */,
 				7BAFF5DC2781BE5E00051F59 /* SetPointsView.swift */,
 			);
-			path = Points;
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B9A2973281E97C10073B54B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B4DCCDB281BEF4B00293A8F /* Components */,
+				7BAFF5DE2781BE7800051F59 /* VoiceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B9A2974281E97D80073B54B /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A2975281E97EA0073B54B /* View */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		7B9A2975281E97EA0073B54B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A8B062799C5EC0053DD39 /* Crop */,
+				7BAFF5DA2781BE3900051F59 /* EditView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B9A2976281E98290073B54B /* ChoosePicture */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A2977281E98380073B54B /* View */,
+			);
+			path = ChoosePicture;
+			sourceTree = "<group>";
+		};
+		7B9A2977281E98380073B54B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF5D82781BE1800051F59 /* ChoosePictureView.swift */,
+				7B4BAF9E27DF379700FC17C1 /* ImagePicker.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7B9A2979281E984F0073B54B /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A297A281E98560073B54B /* View */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		7B9A297A281E98560073B54B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF5E02781BE9600051F59 /* ShareView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7BA50E0D281DB347003BB40C /* SetPoints */ = {
+			isa = PBXGroup;
+			children = (
+				7B9A2972281E97B00073B54B /* View */,
+			);
+			path = SetPoints;
 			sourceTree = "<group>";
 		};
 		7BA50E0E281DB361003BB40C /* Components */ = {
@@ -223,11 +301,15 @@
 		7BAFF5802780A4CA00051F59 /* TalkingImages */ = {
 			isa = PBXGroup;
 			children = (
-				7B4DCCEF281D556E00293A8F /* Model */,
+				7BB525DC2827B5BD00D9FDD8 /* OpenCV */,
+				7BB525D92827B24C00D9FDD8 /* Framework */,
+				7B9A2976281E98290073B54B /* ChoosePicture */,
+				7B9A2974281E97D80073B54B /* Edit */,
+				7BA50E0D281DB347003BB40C /* SetPoints */,
+				7B4DCCDA281BEF3C00293A8F /* Voice */,
+				7B9A2979281E984F0073B54B /* Share */,
 				7B4DCCE0281BF4BA00293A8F /* Redux */,
-				7B7A8B062799C5EC0053DD39 /* Crop */,
 				7B7A8B022799A1F80053DD39 /* ViewModels */,
-				7B7A8B012799A1EF0053DD39 /* Views */,
 				7BAFF5C52780B37300051F59 /* Extensions */,
 				7BAFF5BD2780AE8B00051F59 /* Constants */,
 				7BAFF5BC2780AE7C00051F59 /* Core */,
@@ -271,10 +353,9 @@
 		7BAFF5BC2780AE7C00051F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				7BAFF5CD2780D36600051F59 /* Components */,
+				7B4DCCEF281D556E00293A8F /* Model */,
+				7B7A8B012799A1EF0053DD39 /* Views */,
 				7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */,
-				7BAFF5832780A4CA00051F59 /* ContentView.swift */,
-				7BAFF5D42780E5EF00051F59 /* ToolbarPage.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -284,6 +365,7 @@
 			children = (
 				7BAFF5BE2780AE9F00051F59 /* AppImageNames.swift */,
 				7BAFF5C02780AEAC00051F59 /* AppColors.swift */,
+				7BB525F0282911B900D9FDD8 /* AppConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -295,17 +377,39 @@
 				7BAFF5D02780D55600051F59 /* View+CornerRadius.swift */,
 				7B4BAFA027DF80FE00FC17C1 /* UIImage+Rotate.swift */,
 				7B4DCCE9281C7C1000293A8F /* AVAudioFile+Duration.swift */,
+				7BB525A22821553600D9FDD8 /* UIImage+Crop.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		7BAFF5CD2780D36600051F59 /* Components */ = {
+		7BAFF5CD2780D36600051F59 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				7BC7AFDF27BFE5E1009ABB49 /* AlertView.swift */,
 				7BAFF5CE2780D38200051F59 /* MenuButton.swift */,
 				7BAFF5D22780E37800051F59 /* Toolbar.swift */,
 			);
-			path = Components;
+			path = Component;
+			sourceTree = "<group>";
+		};
+		7BB525D92827B24C00D9FDD8 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				7BB525EA2827BDD700D9FDD8 /* opencv2.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		7BB525DC2827B5BD00D9FDD8 /* OpenCV */ = {
+			isa = PBXGroup;
+			children = (
+				7BB525EC2827BF2F00D9FDD8 /* OpenCVWrapper.h */,
+				7BB525DF2827B5EE00D9FDD8 /* OpenCVWrapper.m */,
+				7BB525DD2827B5EE00D9FDD8 /* TalkingImages-Bridging-Header.h */,
+				7BB525E22827B80300D9FDD8 /* UIImage+OpenCV.h */,
+				7BB525E32827B82800D9FDD8 /* UIImage+OpenCV.m */,
+			);
+			path = OpenCV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +431,7 @@
 			name = TalkingImages;
 			packageProductDependencies = (
 				7BAFF5C32780B26D00051F59 /* iOSDevPackage */,
+				7BB525EE28290D1F00D9FDD8 /* swift-video-generator */,
 			);
 			productName = TalkingImages;
 			productReference = 7BAFF57E2780A4CA00051F59 /* TalkingImages.app */;
@@ -344,6 +449,7 @@
 				TargetAttributes = {
 					7BAFF57D2780A4CA00051F59 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -358,6 +464,7 @@
 			mainGroup = 7BAFF5752780A4CA00051F59;
 			packageReferences = (
 				7BAFF5C22780B26D00051F59 /* XCRemoteSwiftPackageReference "SwiftDeveloperPackage" */,
+				7BB525ED28290D1F00D9FDD8 /* XCRemoteSwiftPackageReference "swift-video-generator" */,
 			);
 			productRefGroup = 7BAFF57F2780A4CA00051F59 /* Products */;
 			projectDirPath = "";
@@ -415,6 +522,7 @@
 				7BA50E10281DB373003BB40C /* Contours.swift in Sources */,
 				7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */,
 				7BAFF5DF2781BE7800051F59 /* VoiceView.swift in Sources */,
+				7BB525A32821553600D9FDD8 /* UIImage+Crop.swift in Sources */,
 				7BAFF5C72780B39000051F59 /* Text+CustomFont.swift in Sources */,
 				7BAFF5D52780E5EF00051F59 /* ToolbarPage.swift in Sources */,
 				7BDFD7DA280BFC63003E6F72 /* CropCorner.swift in Sources */,
@@ -423,13 +531,16 @@
 				7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */,
 				7BAFF5BF2780AE9F00051F59 /* AppImageNames.swift in Sources */,
 				7B4DCCE2281BF4CC00293A8F /* Store.swift in Sources */,
-				7BAFF5DB2781BE3900051F59 /* EditViewView.swift in Sources */,
+				7BAFF5DB2781BE3900051F59 /* EditView.swift in Sources */,
 				7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */,
+				7BB525E02827B5EE00D9FDD8 /* OpenCVWrapper.m in Sources */,
 				7BAFF5CF2780D38200051F59 /* MenuButton.swift in Sources */,
 				7BAFF5D92781BE1800051F59 /* ChoosePictureView.swift in Sources */,
 				7B4BAFA127DF80FE00FC17C1 /* UIImage+Rotate.swift in Sources */,
 				7BAFF5D32780E37800051F59 /* Toolbar.swift in Sources */,
+				7BB525F1282911B900D9FDD8 /* AppConstants.swift in Sources */,
 				7B4DCCDD281BEF6800293A8F /* RecordView.swift in Sources */,
+				7BB525E42827B82800D9FDD8 /* UIImage+OpenCV.m in Sources */,
 				7BAFF5C12780AEAC00051F59 /* AppColors.swift in Sources */,
 				7BDFD7DE280BFCC1003E6F72 /* RectHole.swift in Sources */,
 				7BC7AFE027BFE5E1009ABB49 /* AlertView.swift in Sources */,
@@ -573,11 +684,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TalkingImages/Preview Content\"";
 				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TalkingImages/Framework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingImages/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -594,6 +710,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TalkingImages/OpenCV/TalkingImages-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -604,11 +722,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TalkingImages/Preview Content\"";
 				DEVELOPMENT_TEAM = HRA638G7C3;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TalkingImages/Framework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingImages/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -625,6 +748,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImages;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TalkingImages/OpenCV/TalkingImages-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -662,6 +786,14 @@
 				kind = branch;
 			};
 		};
+		7BB525ED28290D1F00D9FDD8 /* XCRemoteSwiftPackageReference "swift-video-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dev-labs-bg/swift-video-generator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +801,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7BAFF5C22780B26D00051F59 /* XCRemoteSwiftPackageReference "SwiftDeveloperPackage" */;
 			productName = iOSDevPackage;
+		};
+		7BB525EE28290D1F00D9FDD8 /* swift-video-generator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7BB525ED28290D1F00D9FDD8 /* XCRemoteSwiftPackageReference "swift-video-generator" */;
+			productName = "swift-video-generator";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

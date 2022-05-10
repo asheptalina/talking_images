@@ -11,7 +11,8 @@ struct TalkingImagesApp: App {
                             mainState: MainState(),
                             imageState: ImageState(),
                             pointsState: PointsState(),
-                            voiceState: VoiceState()
+                            voiceState: VoiceState(),
+                            videoState: VideoState()
                         ),
                         reducer: appReducer,
                         environment: AppEnvironment()

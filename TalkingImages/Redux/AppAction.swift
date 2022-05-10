@@ -6,10 +6,13 @@ enum AppAction {
     case image(action: ImageAction)
     case poins(action: PointsAction)
     case voice(action: VoiceAction)
+    case video(action: VideoAction)
 }
 
 enum MainAction {
     case setPage(_ page: ToolbarPage)
+    case setReadyForPage(_ page: ToolbarPage)
+
     case showAlert(alertTitle: String, actions: [AlertAction])
     case hideAlert
 }
@@ -17,6 +20,8 @@ enum MainAction {
 enum ImageAction {
     case setRawImage(_ image: UIImage)
     case setProcessedImage(_ image: UIImage)
+    case setCropPoints(topLeft: CGPoint, bottomRight: CGPoint)
+    case cropImage
 }
 
 enum PointsAction {
@@ -48,4 +53,9 @@ enum VoiceAction {
     case setAudioState(_ audioState: AudioState)
     case setSpeed(_ speed: Float)
     case setPitch(_ pitch: Float)
+}
+
+enum VideoAction {
+    case createVideo(audioName: String, images: [UIImage], onComplete: () -> Void)
+    case saveVideo(onComplete: () -> Void)
 }

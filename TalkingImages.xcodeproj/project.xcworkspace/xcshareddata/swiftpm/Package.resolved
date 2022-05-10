@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "swift-video-generator",
+        "repositoryURL": "https://github.com/dev-labs-bg/swift-video-generator.git",
+        "state": {
+          "branch": null,
+          "revision": "0735b1ea6a9cd28e0fd952e4b1801367fddd5501",
+          "version": "1.4.1"
+        }
+      },
+      {
         "package": "iOSDevPackage",
         "repositoryURL": "https://github.com/ISSArt-LLC/SwiftDeveloperPackage",
         "state": {

@@ -7,10 +7,12 @@ struct AppState {
     var imageState: ImageState
     var pointsState: PointsState
     var voiceState: VoiceState
+    var videoState: VideoState
 }
 
 struct MainState {
     var page: ToolbarPage = .choosePicture
+    var readyForPage: ToolbarPage = .choosePicture
 
     var showAlert = false
     var alertTitle: String?
@@ -20,6 +22,9 @@ struct MainState {
 struct ImageState {
     var rawImage: UIImage?
     var processedImage: UIImage?
+//    var cropRect: CGRect?
+    var cropTopLeftPoint: CGPoint?
+    var cropBottomRightPoint: CGPoint?
 }
 
 struct PointsState {
@@ -52,5 +57,9 @@ struct VoiceState {
 
     var speedValue: Float = 1.0
     var pitchValue: Float = 0.0
+}
+
+struct VideoState {
+    
 }
 

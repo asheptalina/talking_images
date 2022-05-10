@@ -1,6 +1,8 @@
 import Foundation
 import AVFAudio
 import AVFoundation
+import SwiftVideoGenerator
+import Photos
 
 typealias AppStore = Store<AppState, AppAction, AppEnvironment>
 
@@ -14,6 +16,8 @@ func appReducer(state: inout AppState, action: AppAction, environment: AppEnviro
         pointsReducer(state: &state.pointsState, action: action, environment: environment)
     case .voice(action: let action):
         voiceReducer(state: &state.voiceState, action: action, environment: environment)
+    case .video(action: let action):
+        videoReducer(state: &state.videoState, action: action, environmnet: environment)
     }
 }
 
@@ -21,6 +25,8 @@ func mainReducer(state: inout MainState, action: MainAction, environment: AppEnv
     switch action {
     case .setPage(let page):
         state.page = page
+    case .setReadyForPage(let page):
+        state.readyForPage = page
     case .showAlert(alertTitle: let alertTitle, actions: let actions):
         state.showAlert = true
         state.alertTitle = alertTitle
@@ -38,6 +44,12 @@ func imageReducer(state: inout ImageState, action: ImageAction, environment: App
         state.rawImage = image
     case .setProcessedImage(let image):
         state.processedImage = image
+    case .cropImage:
+        state.processedImage = (state.processedImage ?? state.rawImage!)
+            .cropped(topLeft: CGPoint(x: 100, y: 100), bottomRight: CGPoint(x: 300, y: 300))
+    case .setCropPoints(topLeft: let topLeft, bottomRight: let bottomRight):
+        state.cropTopLeftPoint = topLeft
+        state.cropBottomRightPoint = bottomRight
     }
 }
 
@@ -120,5 +132,39 @@ func voiceReducer(state: inout VoiceState, action: VoiceAction, environment: App
         state.speedValue = speed
     case .setPitch(let pitch):
         state.pitchValue = pitch
+    }
+}
+
+func videoReducer(state: inout VideoState, action: VideoAction, environmnet: AppEnvironment) {
+    switch action {
+    case .createVideo(let audioName, let images, let onComplete):
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+        let fileName = path.appendingPathComponent(AUDIO_FILE_NAME)
+
+        VideoGenerator.fileName = VIDEO_FILE_NAME_WITHOUT_EXT
+        VideoGenerator.shouldOptimiseImageForVideo = true
+
+        VideoGenerator.current.generate(
+            withImages: images,
+            andAudios: [fileName],
+            andType: .singleAudioMultipleImage
+        ) { progress in
+            print(progress)
+        } outcome: { result in
+            print("res")
+            onComplete()
+        }
+    case .saveVideo(let onComplete):
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileName = path.appendingPathComponent(VIDEO_FILE_NAME)
+
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: fileName)
+        }) { saved, error in
+            if saved {
+                onComplete()
+            }
+        }
     }
 }

@@ -95,7 +95,6 @@ class VoiceViewModel: NSObject, ObservableObject {
         do {
             let file = try AVAudioFile(forReading: playingURL)
 
-
             // 2: create the audio player
             self.audioPlayer = AVAudioPlayerNode()
 
