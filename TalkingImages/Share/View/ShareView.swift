@@ -21,10 +21,16 @@ struct ShareView: View {
                             .appendingPathComponent(VIDEO_FILE_NAME)
                     )).frame(width: geometry.size.width, height: geometry.size.width)
                 } else {
-                    Image(uiImage: self.store.state.imageState.processedImage!)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: geometry.size.width, height: geometry.size.width)
+                    ZStack {
+                        Image(uiImage: self.store.state.imageState.processedImage!)
+                            .resizable()
+                            .scaledToFit()
+                        Color.black.opacity(0.3)
+                        ProgressView()
+                            .scaleEffect(5, anchor: .center)
+                            .progressViewStyle(.circular)
+                            .tint(BACKGROUND_COLOR)
+                    }.frame(width: geometry.size.width, height: geometry.size.width)
                 }
                 HStack {
                     downloadButton()
@@ -42,14 +48,30 @@ struct ShareView: View {
         let imgs = OpenCVWrapper.processImage(
             self.store.state.imageState.processedImage!,
             withMouthPoints: [
-                NSValue(cgPoint: self.store.state.pointsState.mouth1Position),
-                NSValue(cgPoint: self.store.state.pointsState.mouth2Position),
-                NSValue(cgPoint: self.store.state.pointsState.mouth3Position)
+                NSValue(cgPoint: self.toImageSizeCoordinates(
+                    point: self.store.state.pointsState.mouth1Position,
+                    imgSize: self.store.state.imageState.processedImage!.size
+                )),
+                NSValue(cgPoint: self.toImageSizeCoordinates(
+                    point: self.store.state.pointsState.mouth2Position,
+                    imgSize: self.store.state.imageState.processedImage!.size
+                )),
+                NSValue(cgPoint: self.toImageSizeCoordinates(
+                    point: self.store.state.pointsState.mouth3Position,
+                    imgSize: self.store.state.imageState.processedImage!.size
+                ))
             ]
         )!
         store.send(.video(action: .createVideo(audioName: AUDIO_FILE_NAME, images: imgs, onComplete: {
             self.videoIsReady = true
         })))
+    }
+
+    private func toImageSizeCoordinates(point: CGPoint, imgSize: CGSize) -> CGPoint {
+        return CGPoint(
+            x: point.x / self.store.state.imageState.screenWidth! * imgSize.width,
+            y: point.y / self.store.state.imageState.screenWidth! * imgSize.height
+        )
     }
 
     func downloadButton() -> some View {

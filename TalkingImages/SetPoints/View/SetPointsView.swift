@@ -21,9 +21,16 @@ struct SetPointsView: View {
                             .resizable()
                             .scaledToFit()
                     } else {
-                        Image(uiImage: self.store.state.imageState.rawImage!)
-                            .resizable()
-                            .scaledToFit()
+                        ZStack {
+                            Image(uiImage: self.store.state.imageState.rawImage!)
+                                .resizable()
+                                .scaledToFit()
+                            Color.black.opacity(0.3)
+                            ProgressView()
+                                .scaleEffect(5, anchor: .center)
+                                .progressViewStyle(.circular)
+                                .tint(BACKGROUND_COLOR)
+                        }.frame(width: geometry.size.width, height: geometry.size.width)
                     }
                     Contours(
                         pointyEars: self.pointyEars,

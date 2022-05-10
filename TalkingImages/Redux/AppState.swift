@@ -23,8 +23,11 @@ struct ImageState {
     var screenWidth: CGFloat?
     var rawImage: UIImage?
     var processedImage: UIImage?
+
+    // Points are saved in image-sized coordinates
     var cropTopLeftPoint: CGPoint?
     var cropBottomRightPoint: CGPoint?
+
     var rotateDegrees: Float = 0
 }
 
