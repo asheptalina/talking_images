@@ -22,7 +22,7 @@ struct EditView: View {
         GeometryReader { geometry in
             VStack {
                 CropImageView(
-                    cropViewSize: CGSize(width: geometry.size.width, height: geometry.size.width),
+                    cropViewSize: CGSize(width: geometry.size.width, height: geometry.size.width * self.image.size.height / self.image.size.width),
                     rawImage: self.$image,
                     topLeft: self.$topLeftPoint,
                     bottomRight: self.$bottomRightPoint

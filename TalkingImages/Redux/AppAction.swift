@@ -23,7 +23,7 @@ enum ImageAction {
     case setProcessedImage(_ image: UIImage)
     case setCropPoints(topLeft: CGPoint, bottomRight: CGPoint)
     case setRotateDegress(_ degress: Float)
-    case cropImage
+    case cropAndRotateImage
 }
 
 enum PointsAction {

@@ -46,7 +46,7 @@ func imageReducer(state: inout ImageState, action: ImageAction, environment: App
         state.rawImage = image
     case .setProcessedImage(let image):
         state.processedImage = image
-    case .cropImage:
+    case .cropAndRotateImage:
         let rawImage = state.rawImage ?? UIImage()
         var rotatedImage: UIImage?
         if state.rotateDegrees != 0 {

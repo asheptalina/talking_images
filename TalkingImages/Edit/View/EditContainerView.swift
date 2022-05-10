@@ -46,7 +46,7 @@ struct EditContainerView: View {
         ) { topLeft, bottomRight, degress in
             self.store.send(.image(action: .setCropPoints(topLeft: topLeft, bottomRight: bottomRight)))
             self.store.send(.image(action: .setRotateDegress(degress)))
-            self.store.send(.image(action: .cropImage))
+            self.store.send(.image(action: .cropAndRotateImage))
         }
     }
 }

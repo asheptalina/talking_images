@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_image" translatesAutoresizingMaskIntoConstraints="NO" id="76M-i3-UqJ">
+                                <rect key="frame" x="138" y="306.5" width="276" height="555.5"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="talking_images_title" translatesAutoresizingMaskIntoConstraints="NO" id="QH2-Rc-geW">
+                                <rect key="frame" x="47" y="260.5" width="320" height="36"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                        <color key="backgroundColor" red="1" green="0.97254901960784312" blue="0.90588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="76M-i3-UqJ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.62" id="2pg-iE-M1X"/>
+                            <constraint firstItem="76M-i3-UqJ" firstAttribute="top" secondItem="QH2-Rc-geW" secondAttribute="bottom" constant="10" id="8aM-pA-0Zq"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="76M-i3-UqJ" secondAttribute="trailing" id="DXG-ep-BwK"/>
+                            <constraint firstItem="QH2-Rc-geW" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="P5q-tE-wAF"/>
+                            <constraint firstItem="76M-i3-UqJ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.6666" id="QHw-SW-v7k"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="76M-i3-UqJ" secondAttribute="bottom" id="ntY-nQ-IuE"/>
+                            <constraint firstItem="QH2-Rc-geW" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.04" id="zDm-Lx-s9l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splash_screen_image" width="347" height="516"/>
+        <image name="talking_images_title" width="320" height="43"/>
+    </resources>
+</document>

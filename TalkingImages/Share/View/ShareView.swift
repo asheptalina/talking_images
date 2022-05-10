@@ -59,15 +59,7 @@ struct ShareView: View {
             y: mouthPoint1.y - (mouthPoint1.y - mouthPoint2.y) / 3 * 2
         ))
 
-//        mouthPoints.append(CGPoint(
-//            x: mouthPoint1.x + (mouthPoint2.x - mouthPoint1.x) / 3 * 2.5,
-//            y: mouthPoint2.y
-//        ))
         mouthPoints.append(mouthPoint2)
-//        mouthPoints.append(CGPoint(
-//            x: mouthPoint2.x + (mouthPoint3.x - mouthPoint2.x) / 3 * 0.5,
-//            y: mouthPoint2.y
-//        ))
 
         mouthPoints.append(CGPoint(
             x: mouthPoint2.x + (mouthPoint3.x - mouthPoint2.x) / 3 * 1.5,
