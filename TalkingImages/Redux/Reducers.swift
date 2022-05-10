@@ -40,16 +40,41 @@ func mainReducer(state: inout MainState, action: MainAction, environment: AppEnv
 
 func imageReducer(state: inout ImageState, action: ImageAction, environment: AppEnvironment) {
     switch action {
+    case .setScreenWidth(let width):
+        state.screenWidth = width
     case .setRawImage(let image):
         state.rawImage = image
     case .setProcessedImage(let image):
         state.processedImage = image
     case .cropImage:
-        state.processedImage = (state.processedImage ?? state.rawImage!)
-            .cropped(topLeft: CGPoint(x: 100, y: 100), bottomRight: CGPoint(x: 300, y: 300))
+        let rawImage = state.rawImage ?? UIImage()
+        var rotatedImage: UIImage?
+        if state.rotateDegrees != 0 {
+            rotatedImage = rawImage.rotate(degrees: state.rotateDegrees)
+        }
+        if let topLeft = state.cropTopLeftPoint,
+           let bottomRight = state.cropBottomRightPoint {
+            state.processedImage = (rotatedImage ?? rawImage).cropped(topLeft: topLeft, bottomRight: bottomRight)
+        } else {
+            state.processedImage = rotatedImage ?? rawImage
+        }
     case .setCropPoints(topLeft: let topLeft, bottomRight: let bottomRight):
-        state.cropTopLeftPoint = topLeft
-        state.cropBottomRightPoint = bottomRight
+        let img = state.rawImage ?? UIImage()
+        let tl = CGPoint(
+            x: topLeft.x / state.screenWidth! * img.size.width,
+            y: topLeft.y / state.screenWidth! * img.size.height
+        )
+        let br = CGPoint(
+            x: bottomRight.x / state.screenWidth! * img.size.width,
+            y: bottomRight.y / state.screenWidth! * img.size.height
+        )
+        if br.x - tl.x == br.y - tl.y && tl.x <= img.size.width && br.x <= img.size.width
+            && tl.y <= img.size.height && br.y <= img.size.height {
+            state.cropTopLeftPoint = tl
+            state.cropBottomRightPoint = br
+        }
+    case .setRotateDegress(let degress):
+        state.rotateDegrees = degress
     }
 }
 

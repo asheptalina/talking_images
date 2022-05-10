@@ -4,15 +4,15 @@ struct CropImageView: View {
 
     var cropViewSize: CGSize
 
-    @Binding var rawImage: UIImage?
+    @Binding var rawImage: UIImage
 
     @State private var scale: CGFloat = 1.0
 
     @Binding private var topLeftPoint: CGPoint
     @Binding private var bottomRightPoint: CGPoint
 
-    @State private var topRightPoint = CGPoint.zero
-    @State private var bottomLeftPoint = CGPoint.zero
+    @State private var topRightPoint: CGPoint
+    @State private var bottomLeftPoint: CGPoint
 
     @State private var offset = CGSize.zero
 
@@ -20,7 +20,7 @@ struct CropImageView: View {
 
     init(
         cropViewSize: CGSize,
-        rawImage: Binding<UIImage?>,
+        rawImage: Binding<UIImage>,
         topLeft: Binding<CGPoint>,
         bottomRight: Binding<CGPoint>
     ) {
@@ -39,18 +39,14 @@ struct CropImageView: View {
             self.imageView()
             RectHole(topLeftPoint: self.topLeftPoint, bottomRight: self.bottomRightPoint)
                 .fill(Color(UIColor.black.withAlphaComponent(0.5)), style: FillStyle(eoFill: true, antialiased: true))
-            // self.dragArea()
+//            self.dragArea()
             self.cropFrame()
         }
         .frame(width: cropViewSize.width, height: cropViewSize.width)
-//        .onAppear {
-//            self.topRightPoint = CGPoint(x: self.bottomRightPoint.x, y: self.topLeftPoint.y)
-//            self.bottomLeftPoint = CGPoint(x: self.topLeftPoint.x, y: self.bottomRightPoint.y)
-//        }
     }
 
     private func imageView() -> some View {
-        return Image(uiImage: self.rawImage ?? UIImage())
+        return Image(uiImage: self.rawImage)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .scaleEffect(self.scale)
@@ -59,7 +55,7 @@ struct CropImageView: View {
 //    private func dragArea() -> some View {
 //        let size = self.bottomRightPoint.x - self.topLeftPoint.x
 //        return Rectangle()
-//            .fill(.red)
+//            .fill(.red.opacity(0.0))
 //            .frame(width: size, height: size)
 //            .position(x: self.topLeftPoint.x + size / 2, y: self.topLeftPoint.y + size / 2)
 //            .gesture(

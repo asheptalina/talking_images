@@ -21,6 +21,7 @@
 		7B4DCCF1281D557B00293A8F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4DCCF0281D557B00293A8F /* AlertAction.swift */; };
 		7B7A8B052799A3000053DD39 /* TalkingImagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */; };
 		7B7A8B082799C6090053DD39 /* CropImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A8B072799C6090053DD39 /* CropImageView.swift */; };
+		7B9E447A282A63D300A1D8AB /* EditContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9E4479282A63D300A1D8AB /* EditContainerView.swift */; };
 		7BA50E10281DB373003BB40C /* Contours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA50E0F281DB372003BB40C /* Contours.swift */; };
 		7BAFF5822780A4CA00051F59 /* TalkingImagesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */; };
 		7BAFF5842780A4CA00051F59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF5832780A4CA00051F59 /* ContentView.swift */; };
@@ -74,6 +75,7 @@
 		7B4DCCF0281D557B00293A8F /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		7B7A8B042799A3000053DD39 /* TalkingImagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesViewModel.swift; sourceTree = "<group>"; };
 		7B7A8B072799C6090053DD39 /* CropImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropImageView.swift; sourceTree = "<group>"; };
+		7B9E4479282A63D300A1D8AB /* EditContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContainerView.swift; sourceTree = "<group>"; };
 		7BA50E0F281DB372003BB40C /* Contours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contours.swift; sourceTree = "<group>"; };
 		7BAFF57E2780A4CA00051F59 /* TalkingImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkingImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BAFF5812780A4CA00051F59 /* TalkingImagesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkingImagesApp.swift; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				7B7A8B062799C5EC0053DD39 /* Crop */,
 				7BAFF5DA2781BE3900051F59 /* EditView.swift */,
+				7B9E4479282A63D300A1D8AB /* EditContainerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				7BAFF5DD2781BE5E00051F59 /* SetPointsView.swift in Sources */,
 				7BAFF5BF2780AE9F00051F59 /* AppImageNames.swift in Sources */,
 				7B4DCCE2281BF4CC00293A8F /* Store.swift in Sources */,
+				7B9E447A282A63D300A1D8AB /* EditContainerView.swift in Sources */,
 				7BAFF5DB2781BE3900051F59 /* EditView.swift in Sources */,
 				7B4BAF9F27DF379700FC17C1 /* ImagePicker.swift in Sources */,
 				7BB525E02827B5EE00D9FDD8 /* OpenCVWrapper.m in Sources */,
@@ -696,6 +700,10 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingImages/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Desc;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Desc;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Desc;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = Desc;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -707,7 +715,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TalkingImages/OpenCV/TalkingImages-Bridging-Header.h";
@@ -734,6 +742,10 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TalkingImages/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = Desc;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = Desc;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = Desc;
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = Desc;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -745,7 +757,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImages;
+				PRODUCT_BUNDLE_IDENTIFIER = com.issart.TalkingImagesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "TalkingImages/OpenCV/TalkingImages-Bridging-Header.h";

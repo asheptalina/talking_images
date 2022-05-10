@@ -20,11 +20,12 @@ struct MainState {
 }
 
 struct ImageState {
+    var screenWidth: CGFloat?
     var rawImage: UIImage?
     var processedImage: UIImage?
-//    var cropRect: CGRect?
     var cropTopLeftPoint: CGPoint?
     var cropBottomRightPoint: CGPoint?
+    var rotateDegrees: Float = 0
 }
 
 struct PointsState {

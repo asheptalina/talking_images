@@ -18,9 +18,11 @@ enum MainAction {
 }
 
 enum ImageAction {
+    case setScreenWidth(_ width: CGFloat)
     case setRawImage(_ image: UIImage)
     case setProcessedImage(_ image: UIImage)
     case setCropPoints(topLeft: CGPoint, bottomRight: CGPoint)
+    case setRotateDegress(_ degress: Float)
     case cropImage
 }
 

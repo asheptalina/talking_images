@@ -18,14 +18,10 @@ struct ContentView: View {
                             self.store.send(.image(action: .setRawImage(image)))
                             self.store.send(.main(action: .setPage(.edit)))
                             self.store.send(.main(action: .setReadyForPage(.edit)))
+                            self.store.send(.main(action: .setReadyForPage(.setPoints)))
                         }
                     case .edit:
-                        EditView(
-                            image: self.store.state.imageState.rawImage,
-                            onEditImage: { image in
-                                self.store.send(.image(action: .setProcessedImage(image)))
-                                self.store.send(.main(action: .setReadyForPage(.setPoints)))
-                            })
+                        EditContainerView()
                     case .setPoints:
                         SetPointsView()
                     case .voice:
@@ -48,6 +44,9 @@ struct ContentView: View {
                         AlertView(title: title, actions: actions)
                     }
                 }
+            }
+            .onAppear {
+                self.store.send(.image(action: .setScreenWidth(geometry.size.width)))
             }
         }.edgesIgnoringSafeArea(.bottom)
     }

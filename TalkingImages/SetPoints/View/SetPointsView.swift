@@ -16,9 +16,15 @@ struct SetPointsView: View {
         GeometryReader { geometry in
             VStack {
                 ZStack {
-                    Image(uiImage: self.store.state.imageState.processedImage!)
-                        .resizable()
-                        .scaledToFit()
+                    if let image = self.store.state.imageState.processedImage {
+                        Image(uiImage: image)
+                            .resizable()
+                            .scaledToFit()
+                    } else {
+                        Image(uiImage: self.store.state.imageState.rawImage!)
+                            .resizable()
+                            .scaledToFit()
+                    }
                     Contours(
                         pointyEars: self.pointyEars,
                         head1Position: self.store.state.pointsState.head1Position,
