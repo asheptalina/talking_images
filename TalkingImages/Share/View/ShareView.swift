@@ -45,22 +45,48 @@ struct ShareView: View {
     }
 
     func video() {
+        let mouthPoint1 = self.store.state.pointsState.mouth1Position
+        let mouthPoint2 = self.store.state.pointsState.mouth2Position
+        let mouthPoint3 = self.store.state.pointsState.mouth3Position
+        var mouthPoints: [CGPoint] = []
+        mouthPoints.append(mouthPoint1)
+        mouthPoints.append(CGPoint(
+            x: mouthPoint1.x + (mouthPoint2.x - mouthPoint1.x) / 3 * 1.5,
+            y: mouthPoint1.y - (mouthPoint1.y - mouthPoint2.y) / 3 * 1.5
+        ))
+        mouthPoints.append(CGPoint(
+            x: mouthPoint1.x + (mouthPoint2.x - mouthPoint1.x) / 3 * 2,
+            y: mouthPoint1.y - (mouthPoint1.y - mouthPoint2.y) / 3 * 2
+        ))
+
+//        mouthPoints.append(CGPoint(
+//            x: mouthPoint1.x + (mouthPoint2.x - mouthPoint1.x) / 3 * 2.5,
+//            y: mouthPoint2.y
+//        ))
+        mouthPoints.append(mouthPoint2)
+//        mouthPoints.append(CGPoint(
+//            x: mouthPoint2.x + (mouthPoint3.x - mouthPoint2.x) / 3 * 0.5,
+//            y: mouthPoint2.y
+//        ))
+
+        mouthPoints.append(CGPoint(
+            x: mouthPoint2.x + (mouthPoint3.x - mouthPoint2.x) / 3 * 1.5,
+            y: mouthPoint3.y - (mouthPoint3.y - mouthPoint2.y) / 3 * 2
+        ))
+        mouthPoints.append(CGPoint(
+            x: mouthPoint2.x + (mouthPoint3.x - mouthPoint2.x) / 3 * 2,
+            y: mouthPoint3.y - (mouthPoint3.y - mouthPoint2.y) / 3 * 1.5
+        ))
+        mouthPoints.append(mouthPoint3)
+
         let imgs = OpenCVWrapper.processImage(
             self.store.state.imageState.processedImage!,
-            withMouthPoints: [
+            withMouthPoints: mouthPoints.map { point in
                 NSValue(cgPoint: self.toImageSizeCoordinates(
-                    point: self.store.state.pointsState.mouth1Position,
-                    imgSize: self.store.state.imageState.processedImage!.size
-                )),
-                NSValue(cgPoint: self.toImageSizeCoordinates(
-                    point: self.store.state.pointsState.mouth2Position,
-                    imgSize: self.store.state.imageState.processedImage!.size
-                )),
-                NSValue(cgPoint: self.toImageSizeCoordinates(
-                    point: self.store.state.pointsState.mouth3Position,
+                    point: point,
                     imgSize: self.store.state.imageState.processedImage!.size
                 ))
-            ]
+            }
         )!
         store.send(.video(action: .createVideo(audioName: AUDIO_FILE_NAME, images: imgs, onComplete: {
             self.videoIsReady = true
