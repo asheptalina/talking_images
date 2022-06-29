@@ -1,25 +1,23 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "swift-video-generator",
-        "repositoryURL": "https://github.com/dev-labs-bg/swift-video-generator.git",
-        "state": {
-          "branch": null,
-          "revision": "0735b1ea6a9cd28e0fd952e4b1801367fddd5501",
-          "version": "1.4.1"
-        }
-      },
-      {
-        "package": "iOSDevPackage",
-        "repositoryURL": "https://github.com/ISSArt-LLC/SwiftDeveloperPackage",
-        "state": {
-          "branch": "main",
-          "revision": "6f283034a184934ce65f2d7313960c0ae888e9bf",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "swift-video-generator",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/dev-labs-bg/swift-video-generator.git",
+      "state" : {
+        "revision" : "0735b1ea6a9cd28e0fd952e4b1801367fddd5501",
+        "version" : "1.4.1"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "swiftdeveloperpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ISSArt-LLC/SwiftDeveloperPackage",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0a3e90440c7aca207e078fa42bc7ae4f57e39d5e"
+      }
+    }
+  ],
+  "version" : 2
 }

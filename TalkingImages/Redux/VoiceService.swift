@@ -44,41 +44,36 @@ class VoiceService {
     }
 
     func stopRecord() {
-        if audioRecorder.isRecording {
-            audioRecorder.stop()
+        if self.audioRecorder.isRecording {
+            self.audioRecorder.stop()
         }
     }
 
-    func startPlay(speedValue: Float, pitchValue: Float, onComplete: @escaping () -> Void) {
-        guard let playingURL = self.audioUrl else {
-            print("Can't find record")
-            return
-        }
-
+    func startPlay(audioUrl: URL,  speedValue: Float, pitchValue: Float, onComplete: @escaping () -> Void) {
         do {
-            let file = try AVAudioFile(forReading: playingURL)
+            let file = try AVAudioFile(forReading: audioUrl)
 
             self.audioPlayer = AVAudioPlayerNode()
 
             self.pitchControl.pitch = pitchValue
             self.speedControl.rate = speedValue
 
-            engine.attach(audioPlayer)
-            engine.attach(pitchControl)
-            engine.attach(speedControl)
+            self.engine.attach(self.audioPlayer)
+            self.engine.attach(self.pitchControl)
+            self.engine.attach(self.speedControl)
 
-            engine.connect(audioPlayer, to: speedControl, format: nil)
-            engine.connect(speedControl, to: pitchControl, format: nil)
-            engine.connect(pitchControl, to: engine.mainMixerNode, format: nil)
+            self.engine.connect(self.audioPlayer, to: self.speedControl, format: nil)
+            self.engine.connect(self.speedControl, to: self.pitchControl, format: nil)
+            self.engine.connect(self.pitchControl, to: engine.mainMixerNode, format: nil)
 
-            audioPlayer.scheduleFile(file, at: nil) {
+            self.audioPlayer.scheduleFile(file, at: nil) {
                 DispatchQueue.main.async {
                     onComplete()
+//                    self.saveAudioWithParams(file: file)
                 }
             }
-
-            try engine.start()
-            audioPlayer.play()
+            try self.engine.start()
+            self.audioPlayer.play()
         } catch {
             print("Playing Failed")
         }
@@ -92,8 +87,73 @@ class VoiceService {
 
     func stopPlay() {
         if self.audioPlayer.isPlaying {
-            audioPlayer.stop()
+            self.audioPlayer.stop()
         }
     }
+
+//    func saveAudioWithParams(file: AVAudioFile) {
+//
+//        do {
+//            // The maximum number of frames the engine renders in any single render call.
+//            let maxFrames: AVAudioFrameCount = 4096
+//            try self.engine.enableManualRenderingMode(
+//                .offline,
+//                format: AVAudioFormat(settings: file.fileFormat.settings)!,
+//                maximumFrameCount: maxFrames
+//            )
+//        } catch {
+//            fatalError("Enabling manual rendering mode failed: \(error).")
+//        }
+////        file.fileFormat.
+//
+//        // The output buffer to which the engine renders the processed data.
+//        let buffer = AVAudioPCMBuffer(
+//            pcmFormat: engine.manualRenderingFormat,
+//            frameCapacity: engine.manualRenderingMaximumFrameCount
+//        )!
+//
+//        let outputFile: AVAudioFile
+//        do {
+//            let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+//            let outputURL = documentsURL.appendingPathComponent("talking_images_record-p.m4a")
+//
+//            outputFile = try AVAudioFile(
+//                forWriting: outputURL,
+//                settings: file.fileFormat.settings
+//            )
+//        } catch {
+//            fatalError("Unable to open output audio file: \(error).")
+//        }
+//        while self.engine.manualRenderingSampleTime < file.length {
+//            do {
+//                let frameCount = file.length - self.engine.manualRenderingSampleTime
+//                let framesToRender = min(AVAudioFrameCount(frameCount), buffer.frameCapacity)
+//
+//                let status = try self.engine.renderOffline(framesToRender, to: buffer)
+//
+//                switch status {
+//
+//                case .success:
+//                    // The data rendered successfully. Write it to the output file.
+//                    try outputFile.write(from: buffer)
+//
+//                case .insufficientDataFromInputNode:
+//                    // Applicable only when using the input node as one of the sources.
+//                    break
+//
+//                case .cannotDoInCurrentContext:
+//                    // The engine couldn't render in the current render call.
+//                    // Retry in the next iteration.
+//                    break
+//
+//                case .error:
+//                    // An error occurred while rendering the audio.
+//                    fatalError("The manual rendering failed.")
+//                }
+//            } catch {
+//                fatalError("The manual rendering failed: \(error).")
+//            }
+//        }
+//    }
 
 }

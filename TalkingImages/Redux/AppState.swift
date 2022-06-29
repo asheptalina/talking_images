@@ -55,9 +55,9 @@ enum AudioState {
 }
 
 struct VoiceState {
-    var audioState = AudioState.empty
+    var audioFileUrl: URL?
 
-    var maxAudioDurationInSeconds = 30
+    var audioState = AudioState.empty
 
     var speedValue: Float = 1.0
     var pitchValue: Float = 0.0
@@ -66,4 +66,3 @@ struct VoiceState {
 struct VideoState {
     
 }
-

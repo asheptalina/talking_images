@@ -29,6 +29,8 @@ struct RecordView: View {
                         .onReceive(timer) { _ in
                             if self.timeRemaining > 0 {
                                 self.timeRemaining -= 1
+                            } else {
+                                self.stopTimer()
                             }
                         }
                     Spacer()
@@ -46,6 +48,7 @@ struct RecordView: View {
         let recordedPercent = CGFloat(self.maxAudioDurationInSeconds - self.timeRemaining)
             / CGFloat(self.maxAudioDurationInSeconds)
         return Button(action: {
+            print("tt")
             self.stopTimer()
         }, label: {
             ZStack {
@@ -64,12 +67,14 @@ struct RecordView: View {
                 }
             }
         })
-        .simultaneousGesture(
-            LongPressGesture(minimumDuration: 1)
-                .onEnded { _ in
-                    self.startTimer()
-                }
-        )
+            .buttonStyle(.plain)
+            .simultaneousGesture(
+                LongPressGesture(minimumDuration: 1)
+                    .onEnded { _ in
+                        print("ll")
+                        self.startTimer()
+                    }
+            )
     }
 
     private func startTimer() {

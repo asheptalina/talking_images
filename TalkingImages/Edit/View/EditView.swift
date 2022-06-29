@@ -17,6 +17,7 @@ struct EditView: View {
     // UI constants 
     private let rotateButtonHeightCoef = 0.15
     private let titlePaddingCoef = 0.07
+    private let titlePaddingTopCoef = 0.09
 
     var body: some View {
         GeometryReader { geometry in
@@ -31,7 +32,7 @@ struct EditView: View {
                 Text(self.title)
                     .customFont(.semiBold, .medium, color: TEXT_COLOR)
                     .multilineTextAlignment(.center)
-                    .padding(.vertical, geometry.size.height * self.titlePaddingCoef)
+                    .padding(.vertical, geometry.size.width * self.titlePaddingTopCoef)
                 self.rotateButtons(height: self.rotateButtonHeightCoef * geometry.size.height)
 
                 Spacer()

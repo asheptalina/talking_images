@@ -1,5 +1,5 @@
 import SwiftUI
-import iOSDevPackage
+import SwiftDevPackage
 
 // Common
 let BACKGROUND_COLOR = Color.init(hex: 0xFFF8E7)
@@ -23,6 +23,8 @@ let CAMERA_BUTTON_COLOR = Color.init(hex: 0xBA95E0)
 // Voice Screen
 let RECORD_BUTTON_COLOR = Color.init(hex: 0xF1555C)
 let PAUSE_BUTTON_COLOR = TEXT_COLOR
+let DEFAULT_SOUNDS_COLOR = Color.init(hex: 0x8AB2ED)
+let DEFAULT_SOUNDS_TEXT_COLOR = Color.init(hex: 0xFFF6EC)
 
 // Share Screen
 let DOWNLOAD_BUTTON_COLOR = Color.init(hex: 0x58CCB0)

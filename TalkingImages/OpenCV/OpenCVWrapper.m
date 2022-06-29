@@ -26,7 +26,7 @@ using namespace std;
         vector<cv::Point> resPoints = contourPoints;
         vector<cv::Point> points = contourPoints;
         reverse(points.begin(), points.end());
-//        resPoints.push_back(cv::Point(points[0].x, points[0].y + diff1 / 3 * i));
+
         resPoints.push_back(cv::Point(points[1].x, points[1].y + diff2 / 3 * i));
         resPoints.push_back(cv::Point(points[2].x, points[2].y + diff3 / 3 * i));
         resPoints.push_back(cv::Point(points[3].x, points[3].y + diff4 / 3 * i));
@@ -38,8 +38,6 @@ using namespace std;
         cv::fillPoly(mat1, resPoints, cv::Scalar(0, 0, 0));
         cvImages.push_back(mat1);
     }
-
-//    cv::fillPoly(mat, contourPoints, cv::Scalar(0, 0, 0));
 
     UIImage* resultImage = [UIImage imageWithCVMat:mat withOrientation:inputImage.imageOrientation];
     UIImage* resultImage2 = [UIImage imageWithCVMat:cvImages[0] withOrientation:inputImage.imageOrientation];

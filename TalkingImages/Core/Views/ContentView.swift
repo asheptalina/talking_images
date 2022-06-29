@@ -11,7 +11,7 @@ struct ContentView: View {
             ZStack {
                 BACKGROUND_COLOR
                     .edgesIgnoringSafeArea(.all)
-                VStack {
+                VStack(spacing: 0) {
                     switch self.store.state.mainState.page {
                     case .choosePicture:
                         ChoosePictureView { image in
@@ -32,10 +32,6 @@ struct ContentView: View {
                         }
                     }
 
-                    Spacer()
-                }
-                VStack {
-                    Spacer()
                     self.getToolbar(screenWidth: geometry.size.width)
                 }
                 if self.store.state.mainState.showAlert {

@@ -16,3 +16,8 @@ let ROTATE_RESET_ICON = "rotate_reset_icon"
 let RECORD_AGAIN_ICON = "record_again_icon"
 let PLAY_ICON = "play_icon"
 let PAUSE_ICON = "pause_icon"
+
+let DEFAULT_PLAY_ICON = "default_play_icon"
+let DEFAULT_PAUSE_ICON = "default_pause_icon"
+let DEFAULT_CLOSE_ICON = "default_close_icon"
+let DEFAULT_SELECTED_ICON = "default_selected_icon"

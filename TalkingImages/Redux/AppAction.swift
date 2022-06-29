@@ -48,6 +48,8 @@ enum VoiceAction {
     case startRecord
     case stopRecord
 
+    case setAudioFileUrl(_ url: URL)
+
     case startPlay(onComplete: () -> Void)
     case pausePlay
     case stopPlay

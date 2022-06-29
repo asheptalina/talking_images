@@ -139,13 +139,22 @@ func voiceReducer(state: inout VoiceState, action: VoiceAction, environment: App
     case .stopRecord:
         environment.voiceService.stopRecord()
         state.audioState = .readyToPlay
+
+        state.audioFileUrl = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+            .appendingPathComponent(AUDIO_FILE_NAME)
+            .absoluteURL
+    case .setAudioFileUrl(let url):
+        state.audioFileUrl = url
     case .startPlay(let onComplete):
-        environment.voiceService.startPlay(
-            speedValue: state.speedValue,
-            pitchValue: state.pitchValue,
-            onComplete: onComplete
-        )
-        state.audioState = .playing
+        if let url = state.audioFileUrl {
+            environment.voiceService.startPlay(
+                audioUrl: url,
+                speedValue: state.speedValue,
+                pitchValue: state.pitchValue,
+                onComplete: onComplete
+            )
+            state.audioState = .playing
+        }
     case .pausePlay:
         print("")
     case .stopPlay:
